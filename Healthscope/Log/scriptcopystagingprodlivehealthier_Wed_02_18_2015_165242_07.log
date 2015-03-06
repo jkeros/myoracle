@@ -1,0 +1,14 @@
+
+C:\Windows\system32>set _my_datetime=Wed 02/18/2015_16:53:04.72 
+
+C:\Windows\system32>set _my_datetime=Wed_02/18/2015_16:53:04.72 
+
+C:\Windows\system32>set _my_datetime=Wed_02/18/2015_165304.72 
+
+C:\Windows\system32>set _my_datetime=Wed_02_18_2015_165304.72 
+
+C:\Windows\system32>set _my_datetime=Wed_02_18_2015_165304_72 
+
+C:\Windows\system32>sqlplus /@hra_oracle @c:\AutoMated_DataLoad_Jobs\test\livehealthier\scriptcopystagingprodlivehealthier.sql  1>c:\AutoMated_DataLoad_Jobs\TEST\livehealthier\LOG\scriptcopystagingprodlivehealthier_Wed_02_18_2015_165304_72.log 
+
+C:\Windows\system32>C:\Automated_DataLoad_Jobs\Test\livehealthier\livehealthierdir.bat  1>c:\AutoMated_DataLoad_Jobs\TEST\livehealthier\LOG\dir_Wed_02_18_2015_165304_72.out 

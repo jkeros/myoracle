@@ -1,0 +1,12 @@
+
+C:\Windows\system32>set _my_datetime=Fri 02/27/2015_15:12:45.61 
+
+C:\Windows\system32>set _my_datetime=Fri_02/27/2015_15:12:45.61 
+
+C:\Windows\system32>set _my_datetime=Fri_02/27/2015_151245.61 
+
+C:\Windows\system32>set _my_datetime=Fri_02_27_2015_151245.61 
+
+C:\Windows\system32>set _my_datetime=Fri_02_27_2015_151245_61 
+
+C:\Windows\system32>sqlplus /@hra_oracle @c:\AutoMated_DataLoad_Jobs\test\livehealthier\biomatching.sql  1>c:\AutoMated_DataLoad_Jobs\TEST\livehealthier\LOG\biomatching_Fri_02_27_2015_151245_61.log 

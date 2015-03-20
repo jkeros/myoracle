@@ -1,0 +1,12 @@
+
+C:\Users\hmrc_scheduler\Documents>set _my_datetime=Fri 02/27/2015_15:12:41.66 
+
+C:\Users\hmrc_scheduler\Documents>set _my_datetime=Fri_02/27/2015_15:12:41.66 
+
+C:\Users\hmrc_scheduler\Documents>set _my_datetime=Fri_02/27/2015_151241.66 
+
+C:\Users\hmrc_scheduler\Documents>set _my_datetime=Fri_02_27_2015_151241.66 
+
+C:\Users\hmrc_scheduler\Documents>set _my_datetime=Fri_02_27_2015_151241_66 
+
+C:\Users\hmrc_scheduler\Documents>sqlplus /@hra_oracle @c:\AutoMated_DataLoad_Jobs\test\livehealthier\biomatching.sql  1>c:\AutoMated_DataLoad_Jobs\TEST\livehealthier\LOG\biomatching_Fri_02_27_2015_151241_66.log 

@@ -1,0 +1,16 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Fri Feb 27 15:36:23 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Number matching: 1
+Number not matching: 1
+Total Number:2
+31889	      32382
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options

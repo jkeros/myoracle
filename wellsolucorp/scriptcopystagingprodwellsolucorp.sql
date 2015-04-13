@@ -35,9 +35,3 @@ where trunc(create_dt) = trunc(sysdate);
 commit;
 
 exit;
-
-
-
-
-
-

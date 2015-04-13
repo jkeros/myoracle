@@ -1,0 +1,1 @@
+dir /o-d Z:\WellSoluCorp\"Processed by Automated download"\ > S:\"Automated Data Load Files"\WellSoluCorp\FilesLoaded.txt

@@ -8,5 +8,4 @@ set _my_datetime=%_my_datetime:.=_%
 
 
 c:\AutoMated_DataLoad_Jobs\test\ccc\ccc.vbs  > c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\ccc_%_my_datetime%.log
-c:\AutoMated_DataLoad_Jobs\test\ccc\scriptcopystagingprodccc.bat  > c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\scriptcopystagingprodccc_%_my_datetime%.log
 c:\AutoMated_DataLoad_Jobs\test\ccc\cccdir.bat > c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\dir.log

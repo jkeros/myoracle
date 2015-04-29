@@ -1,0 +1,14 @@
+
+C:\Windows\system32>set _my_datetime=Thu 01/29/2015_16:54:52.64 
+
+C:\Windows\system32>set _my_datetime=Thu_01/29/2015_16:54:52.64 
+
+C:\Windows\system32>set _my_datetime=Thu_01/29/2015_165452.64 
+
+C:\Windows\system32>set _my_datetime=Thu_01_29_2015_165452.64 
+
+C:\Windows\system32>set _my_datetime=Thu_01_29_2015_165452_64 
+
+C:\Windows\system32>sqlplus /@hra_oracle @c:\AutoMated_DataLoad_Jobs\test\ccc\scriptcopystagingprodccc.sql  1>c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\scriptcopystagingprodccc_Thu_01_29_2015_165452_64.log 
+
+C:\Windows\system32>C:\Automated_DataLoad_Jobs\Test\ccc\cccdir.bat  1>c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\dir_Thu_01_29_2015_165452_64.out 

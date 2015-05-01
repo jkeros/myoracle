@@ -11,12 +11,12 @@ INTO TABLE  delphi_event_swiped
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 TRAILING NULLCOLS
 (
-swipe_dt	date	'fmmm/dd/yyyy' "trim(:swipe_dt)",
+swipe_dt	date	'fmmm/dd/yyyy hh24:mi:ss' "trim(:swipe_dt)",
 LAST_nm	"trim(:LAST_nm)",
 FIRST_nm	"trim(:FIRST_nm)",
 EMPLOYEE_DIN	"trim(:EMPLOYEE_DIN)",
 gender_ind		"trim(:gender_ind)",
-dob_dt	date	'fmmm/dd/yyyy' "trim(:dob_dt)",
+dob_dt	date	'fmmm/dd/yyyy hh24:mi:ss' "trim(:dob_dt)",
 SURVEY_TYPE_ind	"trim(:SURVEY_TYPE_ind)",
 EVENT_ID	"trim(:EVENT_ID)",
 BODY_FAT_val	"trim(:BODY_FAT_val)",

@@ -8,7 +8,7 @@ Set WshShell = CreateObject("WScript.Shell")
 
 Set xlApp = CreateObject("Excel.Application")
 '~~> Change Path here
-Set xlBook = xlApp.Workbooks.Open("c:\AutoMated_DataLoad_Jobs\Test\eps\eps.xlsm", 0, True)
+Set xlBook = xlApp.Workbooks.Open("c:\AutoMated_DataLoad_Jobs\Test\sandia\sandia.xlsm", 0, True)
 xlApp.Run "LoadExcelCvs"
 xlBook.Close
 xlApp.Quit

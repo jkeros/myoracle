@@ -7,5 +7,5 @@ set _my_datetime=%_my_datetime:/=_%
 set _my_datetime=%_my_datetime:.=_%
 
 
-c:\AutoMated_DataLoad_Jobs\test\eps\eps.vbs  > c:\AutoMated_DataLoad_Jobs\TEST\eps\LOG\eps_%_my_datetime%.log
-c:\AutoMated_DataLoad_Jobs\test\eps\epsdir.bat > c:\AutoMated_DataLoad_Jobs\TEST\eps\LOG\dir.log
+c:\AutoMated_DataLoad_Jobs\test\sandia\sandia.vbs  > c:\AutoMated_DataLoad_Jobs\TEST\sandia\LOG\sandia_%_my_datetime%.log
+c:\AutoMated_DataLoad_Jobs\test\sandia\sandiadir.bat > c:\AutoMated_DataLoad_Jobs\TEST\sandia\LOG\dir.log

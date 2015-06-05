@@ -1,36 +1,47 @@
-insert into  eps_raw 
+insert into  PERSON_SANDIA_RAW
 (
-EMP_ID          , 
-FIRST_nm      , 
-LAST_nm       , 
-addr_txt            , 
-CITy_txt           , 
-ST_cd              ,  
-ZIP_cd              , 
-DOB_dt             ,      
-GENDER_cd          ,  
-CLASS_cd            ,
-create_dt          , 
-created_by         , 
-update_dt          , 
-update_by  
+PERSON_ID          ,
+VHM_SEQ_ID         ,
+SNLID              ,
+FIRST_NAME         ,
+LAST_NAME          ,
+ELIGIBLE_DATE     ,
+RELATION_CODE      ,
+GENDER             ,
+LAST4SSN           ,
+BIRTH_DATE        ,
+CENTER             ,
+LOCATION           ,
+REPRESENTED        ,
+JOB_LEVEL          ,
+JOB_FAMILY         ,
+EDUCATION          ,
+HEALTH_PLAN        ,
+WORK_EMAIL         ,
+DMC                ,
+EMP_SSN            ,
+DIVISION        
 ) 
- select 
-EMP_ID          , 
-FIRST_nm      , 
-LAST_nm       , 
-addr_txt            , 
-CITy_txt           , 
-ST_cd              ,  
-ZIP_cd              , 
-DOB_dt             ,      
-GENDER_cd          ,  
-CLASS_cd            ,
-create_dt          , 
-created_by         , 
-update_dt          , 
-update_by  
-  from hmrc_loader.eps_raw@hmr2_oracle  where trunc(create_dt) = trunc(sysdate);
+ select distinct
+regexp_replace(upper(lastname), '[^[:alnum:]]', '')||lpad(last4ssn,4,'0')||to_char(dob,'yyyymm') person_id,
+ VHM_SEQ_ID,
+ SNLID,
+upper(FIRSTNAME),
+upper(LASTNAME),
+null ELIGIBLEDATE,
+ RELATIONCODE,
+ GENDER,
+lpad(LAST4SSN,4,'0'),
+ DOB,
+ CENTER,
+ LOCATION,
+ REPRESENTED,
+ JOBLEVEL,
+ JOBFAMILY,
+ EDUCATION,
+ HEALTHPLAN,
+ WORKEMAIL,dmc,lpad(FULL_EMP_SSN,9,'0'),DIVISION      
+  from hmrc_loader.PERSON_SANDIA_RAW@hmr2_oracle  where trunc(create_dt) = trunc(sysdate) and length(snlid)<9;
 commit;
 
 exit;

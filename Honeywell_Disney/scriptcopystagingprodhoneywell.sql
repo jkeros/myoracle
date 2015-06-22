@@ -5,7 +5,7 @@ vddte varchar2(20);
 begin
 
 
-select  to_char(next_day(sysdate, 'WEDNESDAY') - 7, 'yyyymmdd') into vddte from dual;
+select  to_char(next_day(sysdate, 'WEDNESDAY') -7, 'yyyymmdd') into vddte from dual;
 
 execute immediate 'CREATE TABLE CIGNA_HW_ELIG_' || vddte || ' ' || 
   '(ACCOUNT_NAME VARCHAR2(100 BYTE),' ||  

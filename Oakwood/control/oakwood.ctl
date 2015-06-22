@@ -38,5 +38,7 @@ Spouse_First_Name		"trim(:Spouse_First_Name)",
 Spouse_Suffix		"trim(:Spouse_Suffix)",
 Relationship		"trim(:Relationship)",
 Spouse_Sex		"substr(:Spouse_Sex,1,1)",
-Spouse_Birthdate		date 'mm/dd/yyyy'
+Spouse_Birthdate		date "mm/dd/yyyy",
+location_code		"trim(:location_code)",
+location_desc		"trim(:location_desc)"
 )

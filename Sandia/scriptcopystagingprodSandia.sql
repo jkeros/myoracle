@@ -44,6 +44,11 @@ lpad(LAST4SSN,4,'0'),
   from hmrc_loader.PERSON_SANDIA_RAW@hmr2_oracle  where trunc(create_dt) = trunc(sysdate) and length(snlid)<9;
 commit;
 
+
+drop table person_sandia_raw_for_vw;
+create table person_sandia_raw_for_vw
+as select * from person_sandia_raw;
+
 exit;
 
 

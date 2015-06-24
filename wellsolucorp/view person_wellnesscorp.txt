@@ -1,0 +1,14 @@
+  CREATE OR REPLACE FORCE VIEW "HRAWEB"."PERSON_WELLNESSCORP" ("GROUP_ID", "GROUP_NAME", "CLIENT", "UNIQUE_ID", "LAST_NAME", "FIRST_NAME", "BIRTH_DATE", "GENDER", "GROUP_CODE") AS 
+  select 
+GROUP_ID       , 
+GROUP_NM     , 
+group_nm CLIENT_id          , 
+UNIQUE_ID       , 
+LAST_nm       , 
+FIRST_nm      , 
+BIRTH_Dt       ,       
+GENDER_cd          , 
+GROUP_id     
+from PERSON_WELLNESSCORp_raw where 
+to_char(update_dt,'yyyymmdd') || rowid   in (select max(to_char(update_dt,'yyyymmdd') || rowid)  from PERSON_WELLNESSCORp_raw
+group by UNIQUE_ID, GROUP_ID );

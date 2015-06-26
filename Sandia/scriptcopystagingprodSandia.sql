@@ -49,6 +49,11 @@ drop table person_sandia_raw_for_vw;
 create table person_sandia_raw_for_vw
 as select * from person_sandia_raw;
 
+
+insert into sandia_bio_2011 
+select * from vw_sandia_toload_bio;
+
+
 exit;
 
 

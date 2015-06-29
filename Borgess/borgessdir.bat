@@ -1,0 +1,1 @@
+dir /o-d Z:\borgess\"Processed by Automated download"\ > S:\"Automated Data Load Files"\borgess\FilesLoaded.txt

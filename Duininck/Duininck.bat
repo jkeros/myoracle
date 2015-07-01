@@ -7,5 +7,5 @@ set _my_datetime=%_my_datetime:/=_%
 set _my_datetime=%_my_datetime:.=_%
 
 
-c:\AutoMated_DataLoad_Jobs\test\Oakwood\Oakwood.vbs  > c:\AutoMated_DataLoad_Jobs\TEST\Oakwood\LOG\Oakwood_%_my_datetime%.log
-c:\AutoMated_DataLoad_Jobs\test\Oakwood\Oakwooddir.bat > c:\AutoMated_DataLoad_Jobs\TEST\Oakwood\LOG\dir.log
+c:\AutoMated_DataLoad_Jobs\test\Duininck\Duininck.vbs  > c:\AutoMated_DataLoad_Jobs\TEST\Duininck\LOG\Duininck_%_my_datetime%.log
+c:\AutoMated_DataLoad_Jobs\test\Duininck\Duininckdir.bat > c:\AutoMated_DataLoad_Jobs\TEST\Duininck\LOG\dir.log

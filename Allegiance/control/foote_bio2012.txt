@@ -1,0 +1,23 @@
+options (skip=1)
+load data
+infile 'foote_bio2012.csv'
+badfile 'foote_bio.bad'
+discardfile 'foote_bio.dsc'
+append
+into table foote_bio12
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+EMPLOYEEID		char  "ltrim(trim(:EMPLOYEEID),'0')",
+LAST_NAME		char  "trim(:LAST_NAME)",
+FIRST_NAME		char  "trim(:FIRST_NAME)",
+CHOL			INTEGER EXTERNAL   "trim(:CHOL)",
+TRIG			INTEGER EXTERNAL   "trim(:TRIG)",
+HDL			INTEGER EXTERNAL   "trim(:HDL)",
+LDL			INTEGER EXTERNAL   "trim(:LDL)",
+HBA1c			char    "trim(:HBA1c)",
+glucose			INTEGER EXTERNAL   "trim(:glucose)",
+enter_date               	"sysdate",
+company_id              char "case when substr(trim(:employeeid),1,1) not between '0' and '9' then substr(trim(:employeeid),1,3)
+                              else '001' end"
+)

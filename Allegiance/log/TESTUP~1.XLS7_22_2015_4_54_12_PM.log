@@ -1,0 +1,92 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Wed Jul 22 16:54:15 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AUTOMA~1\Test\ALLEGI~1\control\FOOTE_~1.TXT
+Data File:      C:\Automated_DataLoad_Jobs\Test\Allegiance\toprocess\testUploadtoUofM7.15.15.csv
+  Bad File:     foote_screen.bad
+  Discard File: foote_screen.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table FOOTE_SCREEN12, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMPLOYEEID                          FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "ltrim(trim(:EMPLOYEEID),'0')"
+LAST_NAME                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:LAST_NAME)"
+FIRST_NAME                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:FIRST_NAME)"
+HEIGHT                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:HEIGHT)"
+WEIGHT                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:WEIGHT)"
+SBP                                  NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:SBP)"
+DBP                                  NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:DBP)"
+WAIST                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:waist)"
+ENTER_DATE                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "sysdate"
+COMPANY_ID                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "case when substr(trim(:employeeid),1,1) not between '0' and '9' then substr(trim(:employeeid),1,3)
+                              else '001' end"
+
+Record 2: Discarded - all columns null.
+Record 3: Discarded - all columns null.
+Record 4: Discarded - all columns null.
+Record 5: Discarded - all columns null.
+Record 6: Discarded - all columns null.
+Record 7: Discarded - all columns null.
+Record 8: Discarded - all columns null.
+Record 9: Discarded - all columns null.
+Record 10: Discarded - all columns null.
+Record 11: Discarded - all columns null.
+Record 12: Discarded - all columns null.
+Record 13: Discarded - all columns null.
+Record 14: Discarded - all columns null.
+Record 15: Discarded - all columns null.
+Record 16: Discarded - all columns null.
+Record 17: Discarded - all columns null.
+Record 18: Discarded - all columns null.
+Record 19: Discarded - all columns null.
+Record 20: Discarded - all columns null.
+Record 21: Discarded - all columns null.
+Record 22: Discarded - all columns null.
+Record 23: Discarded - all columns null.
+Record 24: Discarded - all columns null.
+Record 25: Discarded - all columns null.
+Record 26: Discarded - all columns null.
+
+Table FOOTE_SCREEN12:
+  1 Row successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  25 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 165120 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            26
+Total logical records rejected:         0
+Total logical records discarded:       25
+
+Run began on Wed Jul 22 16:54:15 2015
+Run ended on Wed Jul 22 16:54:16 2015
+
+Elapsed time was:     00:00:00.56
+CPU time was:         00:00:00.10

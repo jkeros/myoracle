@@ -8,5 +8,5 @@ set _my_datetime=%_my_datetime:.=_%
 
 
 C:\Automated_DataLoad_Jobs\Test\Allegiance\openexcel.vbs
-C:\Automated_DataLoad_Jobs\Test\Allegiance\openexcelbio.vbs
+C:\Automated_DataLoad_Jobs\Test\Allegiance\openexcellbio.vbs
 

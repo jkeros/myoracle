@@ -1,4 +1,4 @@
-options   (skip=1)
+options   (skip=1, silent=(discards))
 load data
 infile 'New hires 11.8.13.csv'
 badfile 'New hires 11.8.13.bad'

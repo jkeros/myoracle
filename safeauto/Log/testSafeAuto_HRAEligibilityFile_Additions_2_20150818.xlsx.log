@@ -1,0 +1,84 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Tue Aug 25 12:07:43 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\safeauto\control\safeauto.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\safeauto\toprocess\testSafeAuto_HRAEligibilityFile_Additions_2_20150818.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\safeauto\log\testSafeAuto_HRAEligibilityFile_Additions_2_20150818.xlsx.bad
+  Discard File: SafeAuto_HRA Eligibility File_Additions_20150813.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_SAFEAUTO_RAW, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+SITE_CODE                           FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:SITE_CODE)"
+BENEFIT_PLAN                         NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:BENEFIT_PLAN)"
+SSN_OR_MEMBER_ID                     NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(replace(lower(replace(:SSN_OR_MEMBER_ID,'-','')), 'not recorded',''))"
+EMPLOYEE_ID                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:EMPLOYEE_ID)"
+LASTNAME                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:LASTNAME)"
+FIRSTNAME                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:FIRSTNAME)"
+MI                                   NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:MI)"
+ADDRESS1                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ADDRESS1)"
+ADD2                                 NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ADD2)"
+CITY                                 NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:CITY)"
+STATE                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:STATE)"
+ZIP                                  NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ZIP)"
+DOB                                  NEXT     *   ,  O(") DATE mm/dd/yyyy      
+GENDER                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:GENDER)"
+HOMEPHONE                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:HOMEPHONE)"
+EMAIL                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:EMAIL)"
+FOREIGN_LANGUAGE                     NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:FOREIGN_LANGUAGE)"
+SPANISH_VERSION                      NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:SPANISH_VERSION)"
+EMPLOYEE_SPOUSE                      NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:EMPLOYEE_SPOUSE)"
+
+value used for ROWS parameter changed from 64 to 52
+
+Table PERSON_SAFEAUTO_RAW:
+  7 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 254904 bytes(52 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:             7
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue Aug 25 12:07:43 2015
+Run ended on Tue Aug 25 12:07:44 2015
+
+Elapsed time was:     00:00:00.20
+CPU time was:         00:00:00.01

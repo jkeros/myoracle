@@ -11,7 +11,7 @@ trailing nullcols
 IYL_YEAR		"trim(:IYL_YEAR)",
 ID      	"trim(ltrim(:ID,'0'))",
 MEMBER_TYPE	"trim(:MEMBER_TYPE)",
-SSN		"trim(:SSN)",
+SSN		"trim(replace(:SSN,'-',''))",
 FIRST_NAME	"trim(:FIRST_NAME)",
 MIDDLE_NAME	"trim(:MIDDLE_NAME)",
 LAST_NAME	"trim(:LAST_NAME)",

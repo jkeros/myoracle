@@ -1,0 +1,98 @@
+create or replace function fn_all_companies_cd_nm (vcomp_str varchar2, vcomp_nm_cd_str varchar2) return varchar2
+---------------------------
+---- Fn_company_cd_nm 
+--- THis is used for the Borgess Automated Data loading.  It takes a string and returns the company name or code
+---  if comp_nm_cd_str is 'name'   or 'cd"
+---------------------------
+
+is 
+
+
+---
+---  Look up the company name given the company code in cursor cstring 
+---  or look up the company code given the company name in cursor ccode
+---
+---
+
+cursor cstring is
+select company_desc from all_company_codes
+where lower(trim(company_cd)) = lower(trim(substr(vcomp_str,1,3))) and rownum = 1;
+
+cursor ccode is
+select company_cd from all_company_codes
+where lower(trim(company_desc)) = lower(trim(vcomp_str)) and rownum = 1;
+
+cursor ccode_tryagain is
+select company_cd from all_company_codes
+where substr(lower(trim(company_desc)), 1, 10)  = substr(lower(trim(vcomp_str)),1,10) and rownum = 1;
+
+
+vresult varchar2(2000);
+
+
+begin
+vresult := '';
+
+
+if cstring%isopen then 
+   close cstring;
+end if;
+
+if ccode%isopen then 
+   close ccode;
+end if;
+
+if ccode_tryagain%isopen then 
+   close ccode_tryagain;
+end if;
+
+
+
+if vcomp_nm_cd_str = 'name' then 
+	open cstring;
+   		fetch cstring into vresult;
+	close cstring;
+
+else
+	open ccode;
+	fetch ccode into vresult;
+	close ccode;
+  end if;
+
+
+if vcomp_nm_cd_str = 'code' and vresult is null then 
+--- try again maybe a type was made in the company name 
+
+	open ccode_tryagain;
+	fetch ccode_tryagain into vresult;
+	close ccode_tryagain;
+  end if;
+
+---
+--- if there is no result return N/A
+--- 
+if vcomp_nm_cd_str = 'code' and vresult is null then 
+  vresult := 'N/A';
+elsif vresult is null then 
+   vresult := 'No Name';
+end if;
+
+return vresult;
+
+exception when others then 
+    if cstring%isopen then 
+   close cstring;
+   end if;
+
+   if ccode%isopen then 
+   close ccode;
+   end if;
+
+   if ccode_tryagain%isopen then 
+   close ccode_tryagain;
+   end if;
+
+    vresult := substr(sqlerrm, 1,500);
+    return vresult;
+
+end;

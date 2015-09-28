@@ -11,4 +11,4 @@ GENDER_cd          ,
  fn_all_companies_cd_nm(group_nm, 'code')  group_code
 from PERSON_WELLNESSCORp_raw where
 to_char(update_dt,'yyyymmdd') || rowid   in (select max(to_char(update_dt,'yyyymmdd') || rowid)  from PERSON_WELLNESSCORp_raw
-group by UNIQUE_ID, GROUP_ID );
+group by UNIQUE_ID,   fn_all_companies_cd_nm(group_nm, 'code') );

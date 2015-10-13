@@ -73,7 +73,7 @@ if vcomp_nm_cd_str = 'code' and vresult is null then
 --- 
 if vcomp_nm_cd_str = 'code' and vresult is null then 
 --- if there is NO company then 
-        vresult := substr(upper(vcomp_str),1,3); --> change this to take first three char of company name.
+        vresult := substr(upper(replace(vcomp_str, ' ','')),1,3); --> change this to take first three char of company name.
   --  vresult := 'yes';
 elsif vresult is null then 
    vresult := 'No Name';

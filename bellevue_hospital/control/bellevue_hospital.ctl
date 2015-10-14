@@ -10,5 +10,6 @@ trailing nullcols
 (
 last_name		"trim(:last_name)",
 first_name    	"trim(:first_name)",
-eeid    	"'BEL' || trim(:eeid)"
+eeid    	"'BEL' || trim(:eeid)",
+company         "'BEL'"
 )

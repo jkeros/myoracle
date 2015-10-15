@@ -1,4 +1,4 @@
-OPTIONS (skip=1, SILENT=all)
+OPTIONS (skip=1)
 LOAD DATA
 BADFILE 'cbt_bad.txt'
 DISCARDFILE 'cbt_dsc.txt'

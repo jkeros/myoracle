@@ -28,5 +28,11 @@ dbp_val,
  ldl_val, 
  BODY_FAT_val,
  PSA_val ,
- HBA1C_val  
+ HBA1C_val  ,
+ address1 , 
+ address2, 
+ address3, 
+ city, 
+ state, 
+ zip
 )

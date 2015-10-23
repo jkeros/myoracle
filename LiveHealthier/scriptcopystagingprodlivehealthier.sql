@@ -32,7 +32,13 @@ id ssn_id,
 sysdate create_Dt,  
 user create_user, 
 sysdate update_dt,  
-user update_user 
+user update_user ,
+address1 , 
+ address2, 
+ address3,
+ city, 
+state, 
+zip
   from hmrc_loader.bio_2011_for_paper_hra_raw @hmr2_oracle  where trunc(create_dt) = trunc(sysdate);
 commit;
 exit;

@@ -55,7 +55,7 @@ set heading off
 set linesize 300
 set echo off
 set feedback off
-select company_cd, company_desc from hmrc_company_codes
+select '''' || company_cd || '''' , '''' || company_desc || ''''  from hmrc_company_codes
 where trunc(create_dt) = trunc(sysdate);
 spool C:\Automated_DataLoad_Jobs\Test\texashealth\newcodes.out
 /

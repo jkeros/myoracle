@@ -1,0 +1,23 @@
+        
+        Dim objFSOSource_agr2, objFilesSource_agr2, txtElig2
+
+     Set objFSOSource_agr2 = CreateObject("scripting.filesystemobject")
+
+
+     If objFSOSource_agr2.fileexists("C:\Automated_DataLoad_Jobs\Test\Healthscope\ssninfo.txt") Then
+
+      Set objFilesSource_agr2 = objFSOSource_agr2.OpenTextFile("C:\Automated_DataLoad_Jobs\Test\Healthscope\ssninfo.txt", 1)
+
+             If objFSOSource_agr2.GetFile("C:\Automated_DataLoad_Jobs\Test\Healthscope\ssninfo.txt").Size > 0 Then
+                            txtElig2 = objFilesSource_agr2.ReadAll
+
+            Else
+                       txtElig2 = ""
+            End If
+            
+             
+            mText = mText & txtElig2
+''''End If '''' to file exists
+        
+            
+            mText = Replace(mText, Chr(13), "")

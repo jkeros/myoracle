@@ -1,0 +1,129 @@
+starting...
+here is efilename:TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx
+here is pExcel:C:\AutoMated_DataLoad_Jobs\test\texashealth\toprocess\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx
+here is Javastring:java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;.;C:\Users\hmrc_scheduler\classes ExcelToCSVNonSchool2 C:\\AutoMated_DataLoad_Jobs\\test\\texashealth\\toprocess\\"Texas Health Eligibility File - Azle ISD - Azle High School".xlsx C:\\AutoMated_DataLoad_Jobs\\test\\texashealth\\toprocess\\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.csv 1
+Here is pexcel before grabbing file size:C:\AutoMated_DataLoad_Jobs\test\texashealth\toprocess\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx
+here is sqldrvar : java sqlLoad data=C:\AutoMated_DataLoad_Jobs\test\texashealth\toprocess\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.csv control=C:\AutoMated_DataLoad_Jobs\test\texashealth\control\texashealth.ctl log=C:\AutoMated_DataLoad_Jobs\test\texashealth\log\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx.log bad=C:\AutoMated_DataLoad_Jobs\test\texashealth\log\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx.bad
+-------------------Done executing sql loader 
+here is testelig : 
+SQL*Loader: Release 11.2.0.1.0 - Production on Mon Oct 26 14:37:14 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\texashealth\control\texashealth.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\texashealth\toprocess\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\texashealth\log\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx.bad
+  Discard File: Texas Health Eligibility File - Azle ISD - Azle Elementary.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_TEXASHEALTH_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMPLOYER                            FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:EMPLOYER)"
+SUB_EMPLOYER                         NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:SUB_EMPLOYER)"
+DIVISION                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:DIVISION)"
+PERSON_ID                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:PERSON_ID)"
+FIRST_NAME                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:FIRST_NAME)"
+LAST_NAME                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:LAST_NAME)"
+GENDER                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "substr(:GENDER,1,1)"
+RELATION_CODE                        NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:RELATION_CODE)"
+BIRTH_DATE                           NEXT     *   ,  O(") DATE mm/dd/yyyy      
+
+Record 57: Discarded - all columns null.
+Record 58: Discarded - all columns null.
+Record 59: Discarded - all columns null.
+Record 60: Discarded - all columns null.
+Record 61: Discarded - all columns null.
+Record 62: Discarded - all columns null.
+Record 63: Discarded - all columns null.
+Record 64: Discarded - all columns null.
+Record 65: Discarded - all columns null.
+Record 66: Discarded - all columns null.
+Record 67: Discarded - all columns null.
+Record 68: Discarded - all columns null.
+Record 69: Discarded - all columns null.
+Record 70: Discarded - all columns null.
+Record 71: Discarded - all columns null.
+Record 72: Discarded - all columns null.
+Record 73: Discarded - all columns null.
+Record 74: Discarded - all columns null.
+Record 75: Discarded - all columns null.
+Record 76: Discarded - all columns null.
+Record 77: Discarded - all columns null.
+Record 78: Discarded - all columns null.
+Record 79: Discarded - all columns null.
+Record 80: Discarded - all columns null.
+Record 81: Discarded - all columns null.
+Record 82: Discarded - all columns null.
+Record 83: Discarded - all columns null.
+Record 84: Discarded - all columns null.
+Record 85: Discarded - all columns null.
+Record 86: Discarded - all columns null.
+Record 87: Discarded - all columns null.
+Record 88: Discarded - all columns null.
+Record 89: Discarded - all columns null.
+Record 90: Discarded - all columns null.
+Record 91: Discarded - all columns null.
+Record 92: Discarded - all columns null.
+Record 93: Discarded - all columns null.
+Record 94: Discarded - all columns null.
+Record 95: Discarded - all columns null.
+Record 96: Discarded - all columns null.
+Record 97: Discarded - all columns null.
+Record 98: Discarded - all columns null.
+Record 99: Discarded - all columns null.
+Record 100: Discarded - all columns null.
+Record 101: Discarded - all columns null.
+Record 102: Discarded - all columns null.
+Record 103: Discarded - all columns null.
+Record 104: Discarded - all columns null.
+Record 105: Discarded - all columns null.
+Record 106: Discarded - all columns null.
+Record 107: Discarded - all columns null.
+Record 108: Discarded - all columns null.
+Record 109: Discarded - all columns null.
+
+Table PERSON_TEXASHEALTH_RAW:
+  56 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  53 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 148608 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:           109
+Total logical records rejected:         0
+Total logical records discarded:       53
+
+Run began on Mon Oct 26 14:37:14 2015
+Run ended on Mon Oct 26 14:37:14 2015
+
+Elapsed time was:     00:00:00.11
+CPU time was:         00:00:00.05
+
+ directory listing.....
+ END of processing for FILE:   going to kill properly
+ END of processing for FILE:  C:\AutoMated_DataLoad_Jobs\test\texashealth\toprocess\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.csv going to kill properly
+ END of processing for FILE:  Z:\texashealth\Texas Health Eligibility File - Azle ISD - Azle High School.xlsx going to kill properly
+Here is java mail string:java -cp C:\Users\hmrc_scheduler\classes\javax.mail.jar;.;C:\Users\hmrc_scheduler\classes SendEmail julieker@umich.edu "Automatic Eligibility Load for TOTAL CARE HEALTH --- SUCCESS" "The eligibility data load for texashealth  was successful for C:\AutoMated_DataLoad_Jobs\test\texashealth\toprocess\TexasHealthEligibilityFile-AzleISD-AzleHighSchool.xlsx"

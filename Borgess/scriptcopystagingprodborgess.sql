@@ -60,6 +60,31 @@ from hmrc_loader.per_borgess_raw@hmr2_oracle
 where trunc(create_dt) = trunc(sysdate);
 
 
+
+insert into hmrc_company_codes
+(company_cd, company_desc, client_cd)
+select company_cd, company_desc, 'BG'
+from per_borgess_raw
+where trunc(create_dt) = trunc(sysdate) 
+minus
+select company_cd, company_desc, client_cd
+from hmrc_company_codes where client_cd = 'BG';
+
+commit;
+
+set heading off
+set linesize 300
+set echo off
+set feedback off
+select '''' || company_cd || '''' , '''' || company_desc || ''''  from hmrc_company_codes
+where trunc(create_dt) = trunc(sysdate) and client_cd = 'BG';
+spool C:\Automated_DataLoad_Jobs\Test\borgess\newcodes.out
+/
+
+
+spool off
+
+
 commit;
 
 exit;

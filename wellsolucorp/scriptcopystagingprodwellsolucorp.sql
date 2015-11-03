@@ -2,7 +2,7 @@
 --- insert into all_company_codes if there are any new company codes.
 
 /* insert into all_company_codes (company_cd, company_desc)
-select  fn_all_companies_cd_nm(group_nm, 'code')  group_id,        
+select  fn_hmrc_companies_cd_nm(group_nm, 'code')  group_id,        
 GROUP_NM        
 from hmrc_loader.PERSON_WELLNESSCORP_raw@hmr2_oracle
 where trunc(create_dt) = trunc(sysdate)
@@ -28,7 +28,7 @@ UPDATE_DT       ,
 UPDATED_BY        
 )
 select   
- fn_all_companies_cd_nm(group_nm, 'code')  group_id,        
+ fn_hmrc_companies_cd_nm(group_nm, 'code')  group_id,        
 GROUP_NM        , 
 CLIENT_ID      ,
 UNIQUE_ID       ,

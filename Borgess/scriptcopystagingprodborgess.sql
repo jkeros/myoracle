@@ -29,8 +29,8 @@ UPDATE_DT           ,
 UPDATEED_BY      
 )
 select   
-case when length(company_desc) <= 4 then substr(company_desc, 1, 3) else fn_company_cd_nm(company_desc, 'code') end  company_cd         ,
-case when length(company_desc) <= 4 then  fn_company_cd_nm(company_desc, 'name')  else company_desc end COMPANY_DESC        ,
+case when length(company_desc) <= 4 then substr(company_desc, 1, 3) else fn_hmrc_companies_cd_nm(company_desc, 'BG') end  company_cd         ,
+case when length(company_desc) <= 4 then  fn_hmrc_companies_desc(substr(company_desc, 1,3), 'BG')  else company_desc end COMPANY_DESC        ,
 DEPARTMENT_ID       ,
 DEPT_CD             ,
 EMP_ID              ,

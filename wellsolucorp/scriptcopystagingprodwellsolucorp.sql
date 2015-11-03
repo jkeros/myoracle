@@ -28,7 +28,7 @@ UPDATE_DT       ,
 UPDATED_BY        
 )
 select   
- fn_hmrc_companies_cd_nm(group_nm, 'code')  group_id,        
+ fn_hmrc_companies_cd_nm(group_nm, 'WC')  group_id,        
 GROUP_NM        , 
 CLIENT_ID      ,
 UNIQUE_ID       ,

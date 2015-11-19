@@ -26,12 +26,12 @@ LAST_NAME          ,
 GENDER             ,
 RELATION_CODE      ,
 BIRTH_DATE         ,       
-fn_hmrc_companies_cd_nm(sub_employer, 'TS')  GROUP_CODE         ,
+fn_hmrc_companies_cd_nm(nvl(sub_employer, employer), 'TS')  GROUP_CODE         ,
 CREATE_DT         ,         
 CREATED_BY         ,
 UPDATE_DT         ,         
 UPDATED_BY   ,
-fn_hmrc_companies_cd_nm(sub_employer, 'TS')         
+fn_hmrc_companies_cd_nm(nvl(sub_employer, employer), 'TS')         
 from hmrc_loader.person_texashealth_raw@hmr2_oracle
 where trunc(create_dt) = trunc(sysdate);
 
@@ -42,12 +42,12 @@ where trunc(create_dt) = trunc(sysdate);
 
 insert into hmrc_company_codes
 (company_cd, company_desc, client_cd)
-select employer_cd, sub_employer, 'TS'
+select employer_cd, nvl(sub_employer,employer), 'TS'
 from person_texashealth_raw
 where trunc(create_dt) = trunc(sysdate)
 minus
 select company_cd, company_desc, client_cd
-from hmrc_company_codes;
+from hmrc_company_codes where client_cd ='TS';
 
 commit;
 

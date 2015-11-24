@@ -2,40 +2,7 @@ insert into foote_jck_per (id, first_name, last_name, dob, gender, address1, add
 select id, first_name, last_name, dob,gender, address1, address2, city, state, zip_code,null,department,   iyl_year , trunc(sysdate) from foote.hmrc_personnel 
 where id like 'JCK%' and trunc(date_added) = trunc(sysdate) ;
 
-insert into foote_mac_per
-(ID               ,     
-LAST_NAME        , 
-FIRST_NAME       , 
-MIDDLE_NAME      ,  
-DEPT             ,  
-DOB              ,         
-GENDER           ,   
-ADDRESS1         , 
-ADDRESS2         , 
-CITY             , 
-STATE            ,  
-ZIP              ,       
-YEAR             ,  
-ENTER_DATE     ,
-membership_type_cd    )  
-select  
-ID                         ,   
-LAST_NAME                  ,  
-FIRST_NAME                 , 
-middle_name               ,      
-DEPartment                , 
-DOB                       ,         
-GENDER                     , 
-ADDRESS1                   , 
-ADDRESS2                   , 
-CITY                       ,
-STATE                      ,
-zip_code, 
-iyl_year,
-date_added,
-member_type
-from foote.hmrc_personnel
-where id like 'MACI%' and trunc(date_added) = trunc(sysdate) ;
+
 
 
 insert into foote_bre_per
@@ -463,5 +430,34 @@ DEPartment            ,
 iyl_YEAR            ,      
 ZIP_code, gender, member_type from foote.hmrc_personnel where id like 'CHE%' and trunc(date_added) = trunc(sysdate);
 
+
+insert into foote_wal_per 
+(
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPT            ,  
+YEAR            ,      
+ZIP ,
+gender, 
+ member_type                
+)
+select 
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS1         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPartment            ,  
+iyl_YEAR            ,      
+ZIP_code, gender, member_type from foote.hmrc_personnel where id like 'WAL%' and trunc(date_added) = trunc(sysdate);
 
 exit;

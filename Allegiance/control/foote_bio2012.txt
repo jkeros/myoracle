@@ -18,6 +18,6 @@ LDL			INTEGER EXTERNAL   "trim(:LDL)",
 HBA1c			char    "trim(:HBA1c)",
 glucose			INTEGER EXTERNAL   "trim(:glucose)",
 enter_date               	"sysdate",
-company_id              char "case when substr(trim(:employeeid),1,1) not between '0' and '9' then substr(trim(:employeeid),1,3)
+company_id              char "case when substr(trim(:employeeid),1,3) = 'MAC' then 'MACI' when substr(trim(:employeeid),1,1) not between '0' and '9' then substr(trim(:employeeid),1,3)
                               else '001' end"
 )

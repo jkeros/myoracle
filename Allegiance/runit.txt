@@ -102,7 +102,7 @@ insert into foote_gli_per
 (
 id, first_name, last_name, address, city, state, zip, dob, dept, year          )
 select  
-ID            ,  
+replace(ID, ' ', '')            ,  
 FIRST_NAME            , 
 LAST_NAME             ,    
 ADDRESS1              , 

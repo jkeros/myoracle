@@ -1,4 +1,4 @@
-  CREATE OR REPLACE FORCE VIEW "HRAWEB"."PER_BORGESS" ("CO", "COMPANY", "DEPARTMENT_ID", "DEPT", "EMP_ID", "NAME", "JOB_CODE", "JOB_TITLE", "HIRE_DATE", "FULL_PART", "ACTION", "ADDRESS_1", "ADDRESS_2", "CITY", "STATE", "POSTAL", "PHONE", "SEX", "CLIENT_ID", "LAST_NAME", "FIRST_NAME", "BIRTH_DATE", "WORK_EMAIL") AS 
+  CREATE  VIEW per_borgess ("CO", "COMPANY", "DEPARTMENT_ID", "DEPT", "EMP_ID", "NAME", "JOB_CODE", "JOB_TITLE", "HIRE_DATE", "FULL_PART", "ACTION", "ADDRESS_1", "ADDRESS_2", "CITY", "STATE", "POSTAL", "PHONE", "SEX", "CLIENT_ID", "LAST_NAME", "FIRST_NAME", "BIRTH_DATE", "WORK_EMAIL") AS 
   select 
 COMPANY_CD          ,
 COMPANY_DESC        ,
@@ -24,5 +24,5 @@ FIRST_NM            ,
 DOB_DT              ,      
 WORK_EMAIL_CD    
 from per_borgess_raw where 
-to_char(update_dt,'yyyymmdd') || rowid   in (select max(to_char(update_dt,'yyyymmdd') || rowid)  from PER_borgess_raw
+to_char(update_dt,'yyyymmddhh24:mi:ss') || rowid   in (select max(to_char(update_dt,'yyyymmddhh24:mi:ss') || rowid)  from PER_borgess_raw
 group by emp_id, company_cd);

@@ -202,7 +202,11 @@ System.out.println("........here is no dept:" + noDept);
 
                 case Cell.CELL_TYPE_BLANK:
                         cellValue.append("" + ",");
-                                   
+                               if (noDept.indexOf("Y") == 0 && cellInc== 14 )
+                     {
+                           System.out.println("Aappending extra columns");
+                           cellValue.append( ",");    
+                      }        
                         break;
                         
                 default:
@@ -213,6 +217,11 @@ System.out.println("........here is no dept:" + noDept);
                           pasteValue = pasteValue.replace("=","");
                     
                           cellValue.append("\"" +  pasteValue + "\"" + ",");
+    if (noDept.indexOf("Y") == 0 && cellInc== 14 )
+                     {
+                           System.out.println("Aaappending extra columns");
+                           cellValue.append( ",");    
+                      }
                           
 			System.out.println("........hereeee is default:" + pasteValue);
                 }

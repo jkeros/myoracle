@@ -1,0 +1,1 @@
+c:\AutoMated_DataLoad_Jobs\test\morrissey\moriseeydir.bat > c:\AutoMated_DataLoad_Jobs\TEST\morrissey\LOG\dir.log

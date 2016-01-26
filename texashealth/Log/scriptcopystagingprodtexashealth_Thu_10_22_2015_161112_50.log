@@ -1,0 +1,22 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Thu Oct 22 16:11:12 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SUB_EMPLOYER	   ,
+*
+ERROR at line 21:
+ORA-12899: value too large for column
+"HRAWEB"."PERSON_TEXASHEALTH_RAW"."EMPLOYER" (actual: 15, maximum: 10)
+
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options

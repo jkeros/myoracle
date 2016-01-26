@@ -1,0 +1,2 @@
+cd \users\julieker\classes
+java -cp C:\Users\julieker\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\julieker\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\julieker\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\julieker\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\julieker\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV

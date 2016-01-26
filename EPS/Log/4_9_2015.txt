@@ -1,0 +1,78 @@
+starting...
+here is efilename:EPSEligibilityMar19.xlsx
+here is pExcel:C:\AutoMated_DataLoad_Jobs\test\EPS\toprocess\EPSEligibilityMar19.xlsx
+here is Javastring:java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;.;C:\Users\hmrc_scheduler\classes ExcelToCSVNonSchool2 C:\\AutoMated_DataLoad_Jobs\\test\\EPS\\toprocess\\"EPS Eligibility Mar 19".xlsx C:\\AutoMated_DataLoad_Jobs\\test\\EPS\\toprocess\\EPSEligibilityMar19.csv 1
+Here is pexcel before grabbing file size:C:\AutoMated_DataLoad_Jobs\test\EPS\toprocess\EPSEligibilityMar19.xlsx
+here is sqldrvar : java sqlLoad data=C:\AutoMated_DataLoad_Jobs\test\EPS\toprocess\EPSEligibilityMar19.csv control=C:\AutoMated_DataLoad_Jobs\test\EPS\control\EPS.ctl log=C:\AutoMated_DataLoad_Jobs\test\EPS\log\EPSEligibilityMar19.xlsx.log bad=C:\AutoMated_DataLoad_Jobs\test\EPS\log\EPSEligibilityMar19.xlsx.bad
+-------------------Done executing sql loader 
+here is testelig : 
+SQL*Loader: Release 11.2.0.1.0 - Production on Thu Apr 9 11:45:45 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\EPS\control\EPS.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\EPS\toprocess\EPSEligibilityMar19.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\EPS\log\EPSEligibilityMar19.xlsx.bad
+  Discard File: EPS Eligibility File.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table EPS_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMP_ID                              FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:Emp_ID)"
+FIRST_NM                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:First_nm)"
+LAST_NM                              NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:Last_nm)"
+ADDR_TXT                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:addr_txt)"
+CITY_TXT                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:city_txt)"
+ST_CD                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:st_cd)"
+ZIP_CD                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ZIP_CD)"
+DOB_DT                               NEXT     *   ,  O(") DATE mm/dd/yyyy      
+GENDER_CD                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:gender_cd)"
+CLASS_CD                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:class_cd)"
+
+
+Table EPS_RAW:
+  11 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 165120 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            11
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Thu Apr 09 11:45:45 2015
+Run ended on Thu Apr 09 11:45:45 2015
+
+Elapsed time was:     00:00:00.13
+CPU time was:         00:00:00.03
+
+ directory listing.....
+ END of processing for FILE:   going to kill properly
+ END of processing for FILE:  C:\AutoMated_DataLoad_Jobs\test\EPS\toprocess\EPSEligibilityMar19.csv going to kill properly
+ END of processing for FILE:  z:\EPS\EPS Eligibility Mar 19.xlsx going to kill properly
+Here is java mail string:java -cp C:\Users\hmrc_scheduler\classes\javax.mail.jar;.;C:\Users\hmrc_scheduler\classes SendEmail "julieker@umich.edu,lingzhic@umich.edu,jerschat@umich.edu,weizhou@umich.edu" "Automatic Eligibility Load for EPS" "The eligibility data load for EPS  was successful for C:\AutoMated_DataLoad_Jobs\test\EPS\toprocess\EPSEligibilityMar19.xlsx"

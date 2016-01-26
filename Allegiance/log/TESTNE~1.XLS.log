@@ -1,0 +1,150 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Wed Jul 22 16:53:53 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AUTOMA~1\Test\ALLEGI~1\control\MAIN_A~1.CTL
+Data File:      C:\Automated_DataLoad_Jobs\Test\Allegiance\toprocess\testNeweligibilityandpersonnelchanges-7.20.15.csv
+  Bad File:     New hires 11.8.13.bad
+  Discard File: New hires 11.8.13.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table HMRC_PERSONNEL, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+IYL_YEAR                            FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:IYL_YEAR)"
+ID                                   NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(ltrim(:ID,'0'))"
+MEMBER_TYPE                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:MEMBER_TYPE)"
+SSN                                  NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:SSN)"
+FIRST_NAME                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:FIRST_NAME)"
+MIDDLE_NAME                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:MIDDLE_NAME)"
+LAST_NAME                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:LAST_NAME)"
+DOB                                  NEXT     *   ,  O(") DATE fmmm/dd/yyyy    
+    SQL string for column : "trim(:DOB)"
+DEPT                                 NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:dept)"
+COST_CENTER                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:COST_CENTER)"
+DEPARTMENT                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:DEPARTMENT)"
+SERVICE_AREA                         NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:SERVICE_AREA)"
+SHIFT                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:shift)"
+GENDER                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:GENDER)"
+ADDRESS1                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ADDRESS1)"
+ADDRESS2                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ADDRESS2)"
+CITY                                 NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:CITY)"
+STATE                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:STATE)"
+ZIP_CODE                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ZIP_CODE)"
+DATE_ADDED                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "sysdate"
+
+value used for ROWS parameter changed from 64 to 49
+Record 2: Discarded - all columns null.
+Record 3: Discarded - all columns null.
+Record 4: Discarded - all columns null.
+Record 5: Discarded - all columns null.
+Record 6: Discarded - all columns null.
+Record 7: Discarded - all columns null.
+Record 8: Discarded - all columns null.
+Record 9: Discarded - all columns null.
+Record 10: Discarded - all columns null.
+Record 11: Discarded - all columns null.
+Record 12: Discarded - all columns null.
+Record 13: Discarded - all columns null.
+Record 14: Discarded - all columns null.
+Record 15: Discarded - all columns null.
+Record 16: Discarded - all columns null.
+Record 17: Discarded - all columns null.
+Record 18: Discarded - all columns null.
+Record 19: Discarded - all columns null.
+Record 20: Discarded - all columns null.
+Record 21: Discarded - all columns null.
+Record 22: Discarded - all columns null.
+Record 23: Discarded - all columns null.
+Record 24: Discarded - all columns null.
+Record 25: Discarded - all columns null.
+Record 26: Discarded - all columns null.
+Record 27: Discarded - all columns null.
+Record 28: Discarded - all columns null.
+Record 29: Discarded - all columns null.
+Record 30: Discarded - all columns null.
+Record 31: Discarded - all columns null.
+Record 32: Discarded - all columns null.
+Record 33: Discarded - all columns null.
+Record 34: Discarded - all columns null.
+Record 35: Discarded - all columns null.
+Record 36: Discarded - all columns null.
+Record 37: Discarded - all columns null.
+Record 38: Discarded - all columns null.
+Record 39: Discarded - all columns null.
+Record 40: Discarded - all columns null.
+Record 41: Discarded - all columns null.
+Record 42: Discarded - all columns null.
+Record 43: Discarded - all columns null.
+Record 44: Discarded - all columns null.
+Record 45: Discarded - all columns null.
+Record 46: Discarded - all columns null.
+Record 47: Discarded - all columns null.
+Record 48: Discarded - all columns null.
+Record 49: Discarded - all columns null.
+Record 50: Discarded - all columns null.
+Record 51: Discarded - all columns null.
+Record 52: Discarded - all columns null.
+Record 53: Discarded - all columns null.
+Record 54: Discarded - all columns null.
+Record 55: Discarded - all columns null.
+Record 56: Discarded - all columns null.
+Record 57: Discarded - all columns null.
+Record 58: Discarded - all columns null.
+Record 59: Discarded - all columns null.
+Record 60: Discarded - all columns null.
+Record 61: Discarded - all columns null.
+Record 62: Discarded - all columns null.
+Record 63: Discarded - all columns null.
+Record 64: Discarded - all columns null.
+
+Table HMRC_PERSONNEL:
+  1 Row successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  63 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 252840 bytes(49 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            64
+Total logical records rejected:         0
+Total logical records discarded:       63
+
+Run began on Wed Jul 22 16:53:53 2015
+Run ended on Wed Jul 22 16:53:53 2015
+
+Elapsed time was:     00:00:00.69
+CPU time was:         00:00:00.08

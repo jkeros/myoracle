@@ -1,0 +1,72 @@
+starting...
+here is efilename:11.18.15.xls
+here is pExcel:C:\AutoMated_DataLoad_Jobs\test\marys\toprocess\11.18.15.xls
+here is Javastring:java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;.;C:\Users\hmrc_scheduler\classes ExcelToCSVNonSchool2 C:\\AutoMated_DataLoad_Jobs\\test\\marys\\toprocess\\"11".18".15".xls C:\\AutoMated_DataLoad_Jobs\\test\\marys\\toprocess\\11.18.15.csv 2
+Here is pexcel before grabbing file size:C:\AutoMated_DataLoad_Jobs\test\marys\toprocess\11.18.15.xls
+here is sqldrvar : java sqlLoad  data=C:\AutoMated_DataLoad_Jobs\test\marys\toprocess\11.18.15.csv control=C:\AutoMated_DataLoad_Jobs\test\marys\control\marys.ctl log=C:\AutoMated_DataLoad_Jobs\test\marys\log\11.18.15.xls.log bad=C:\AutoMated_DataLoad_Jobs\test\marys\log\11.18.15.xls.bad
+-------------------Done executing sql loader 
+here is testelig : 
+SQL*Loader: Release 11.2.0.1.0 - Production on Fri Nov 20 16:03:23 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\marys\control\marys.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\marys\toprocess\11.18.15.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\marys\log\11.18.15.xls.bad
+  Discard File: stmarys 2016 Identifier List.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_STMARYS_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID_NUMBER                           FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:id_number)"
+RELATIONSHIP                         NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:relationship)"
+FIRST_NAME                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:first_name)"
+LAST_NAME                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Last_Name)"
+BIRTH_DATE                           NEXT     *   ,  O(") DATE fmmm/dd/yyyy    
+GENDER                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:gender)"
+GROUP_CODE                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "'2S'"
+
+
+Table PERSON_STMARYS_RAW:
+  1901 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 115584 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:          1901
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Fri Nov 20 16:03:23 2015
+Run ended on Fri Nov 20 16:03:23 2015
+
+Elapsed time was:     00:00:00.19
+CPU time was:         00:00:00.06
+
+ directory listing.....
+ END of processing for FILE:   going to kill properly
+ END of processing for FILE:  C:\AutoMated_DataLoad_Jobs\test\marys\toprocess\11.18.15.csv going to kill properly
+ END of processing for FILE:  Z:\marys\11.18.15.xls going to kill properly
+Here is java mail string:java -cp C:\Users\hmrc_scheduler\classes\javax.mail.jar;.;C:\Users\hmrc_scheduler\classes SendEmail "julieker@umich.edu,lingzhic@umich.edu,weizhou@umich.edu,sbarnhil@umich.edu,sterlink@umich.edu" "ST MARY Automatic Eligibility Load SUCCESS " "The eligibility data load for marys  was successful for C:\AutoMated_DataLoad_Jobs\test\marys\toprocess\11.18.15.xls"

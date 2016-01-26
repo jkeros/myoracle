@@ -1,0 +1,151 @@
+starting...
+here is efilename:34377_201503051500_GHS_ELIG_HSCB_20150305.DAT
+here is pExcel:C:\AutoMated_DataLoad_Jobs\test\Healthscope\toprocess\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT
+Here is pexcel before grabbing file size:C:\AutoMated_DataLoad_Jobs\test\Healthscope\toprocess\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT
+here is sqldrvar : java sqlLoad  data=C:\AutoMated_DataLoad_Jobs\test\Healthscope\toprocess\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT control=C:\AutoMated_DataLoad_Jobs\test\Healthscope\control\Healthscope.ctl log=C:\AutoMated_DataLoad_Jobs\test\Healthscope\log\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT.log bad=C:\AutoMated_DataLoad_Jobs\test\Healthscope\log\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT.bad
+-------------------Done executing sql loader 
+here is testelig : 
+SQL*Loader: Release 11.2.0.1.0 - Production on Fri Mar 6 15:00:45 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\Healthscope\control\Healthscope.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\Healthscope\toprocess\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\Healthscope\log\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT.bad
+  Discard File: 34147_201502261432_GHS_ELIG_HSCB_20150226.disc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_GRANVILLE_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+RECORD_DEFINITION_TYPE                1:1     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Record_Definition_Type)"
+RECORD_INDICATOR                      2:2     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Record_Indicator)"
+MAINTENANCE_TYPE_CD                   3:5     3   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Maintenance_Type_cd)"
+MAINTENANCE_REASON_CD                 6:9     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Maintenance_Reason_cd)"
+MEMBER_UNIQUE_ID                    40:69    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Unique_ID)"
+MEMBER_SSN                          70:78     9   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_SSN)"
+MEMBER_LAST_NM                     79:118    40   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Last_nm)"
+MEMBER_FIRST_NM                   119:158    40   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_First_nm)"
+MEMBER_MIDDLE_INITIAL             159:159     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Middle_Initial)"
+MEMBER_BIRTH_DT                   160:169    10   ,  O(") DATE MM-DD-YYYY      
+MEMBER_GENDER_CD                  170:173     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Gender_cd)"
+MEMBER_MARITAL_STATUS             174:177     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Marital_Status)"
+MEMBER_LANGUAGE_INDICATOR         182:185     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Language_Indicator)"
+MEMBER_EXPIRATION_DT              186:195    10   ,  O(") DATE MM-DD-YYYY      
+    NULL if MEMBER_EXPIRATION_DT = 0X20202020202020202020(character '          ')
+STUDENT_FLG                       196:196     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Student_flg)"
+HANDICAP_FLG                      197:197     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Handicap_flg)"
+RETIRED_FLG                       198:198     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Retired_flg)"
+MEMBER_EMAIL_ADDRESS              199:278    80   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_EMail_Address)"
+MEMBER_STREET_1                   279:318    40   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Street_1)"
+MEMBER_STREET_2                   319:358    40   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Street_2)"
+MEMBER_CITY                       359:388    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_City)"
+MEMBER_STATE_CD                   389:390     2   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_State_cd)"
+MEMBER_ZIP_CD                     391:400    10   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Zip_cd)"
+MEMBER_COUNTRY_CD                 401:404     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Country_cd)"
+MEMBER_HOME_PHONE                 409:418    10   ,  O(") CHARACTER            
+    NULL if MEMBER_HOME_PHONE = 0X30303030303030303030(character '0000000000')
+    SQL string for column : "TRIM(:Member_Home_Phone)"
+MEMBER_WORK_PHONE                 419:428    10   ,  O(") CHARACTER            
+    NULL if MEMBER_WORK_PHONE = 0X30303030303030303030(character '0000000000')
+    SQL string for column : "TRIM(:Member_Work_Phone)"
+MEMBER_EFFECTIVE_DT               429:438    10   ,  O(") DATE MM-DD-YYYY      
+MEMBER_TERMINATION_DT             439:448    10   ,  O(") DATE MM-DD-YYYY      
+    NULL if MEMBER_TERMINATION_DT = 0X20202020202020202020(character '          ')
+SUBSCRIBER_UNIQUE_ID              449:478    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Subscriber_Unique_ID)"
+SUBSCRIBER_SSN_NUMBER             479:487     9   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Subscriber_SSN_Number)"
+SUBSCRIBER_LAST_NM                488:527    40   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Subscriber_Last_nm)"
+SUBSCRIBER_FIRST_NM               528:567    40   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Subscriber_First_nm)"
+SUBSCRIBER_MIDDLE_INITIAL         568:568     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Subscriber_Middle_Initial)"
+SUBSCRIBER_BIRTH_DT               569:578    10   ,  O(") DATE MM-DD-YYYY      
+SUBSCRIBER_GENDER_CD              579:582     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Subscriber_Gender_cd)"
+MEMBER_REL_TO_SUBSCRIBER          583:586     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Member_Rel_to_Subscriber)"
+EMPLOYER_ID                       587:616    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Employer_ID)"
+EMPLOYER_GROUPING_ID              617:646    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Employer_Grouping_ID)"
+PLAN_TYPE                         647:650     4   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Plan_Type)"
+BENEFIT_PLAN_NUMBER               651:680    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Benefit_Plan_Number)"
+COORDINATION_OF_BENEFITS_FLG      735:735     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Coordination_of_Benefits_flg)"
+COBRA_FLG                         736:736     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:COBRA_flg)"
+COBRA_EFFECTIVE_DT                737:746    10   ,  O(") DATE MM-DD-YYYY      
+    NULL if COBRA_EFFECTIVE_DT = 0X20202020202020202020(character '          ')
+COBRA_TERMINATION_DT              747:756    10   ,  O(") DATE MM-DD-YYYY      
+    NULL if COBRA_TERMINATION_DT = 0X20202020202020202020(character '          ')
+SUSPENDED_BENEFIT_FLG             757:757     1   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Suspended_Benefit_flg)"
+CUSTOMERINTERNALMEMBERUNIQUEID    758:787    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:CustomerInternalMemberUniqueID)"
+ALTERNATE_PRODUCT_ID              867:896    30   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:Alternate_Product_Id)"
+
+
+Table PERSON_GRANVILLE_RAW:
+  610 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  53248 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:           610
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Fri Mar 06 15:00:45 2015
+Run ended on Fri Mar 06 15:00:45 2015
+
+Elapsed time was:     00:00:00.26
+CPU time was:         00:00:00.07
+
+ directory listing.....
+ END of processing for FILE:   going to kill properly
+ END of processing for FILE:  C:\AutoMated_DataLoad_Jobs\test\Healthscope\toprocess\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT going to kill properly
+ END of processing for FILE:  U:\GHS\elig\34377_201503051500_GHS_ELIG_HSCB_20150305.DAT going to kill properly
+Here is java mail string:java -cp C:\Users\hmrc_scheduler\classes\javax.mail.jar;.;C:\Users\hmrc_scheduler\classes SendEmail julieker@umich.edu "Automatic Eligibility Load for HealthScope" "The eligibility data load for Healthscope  was successful for  ,"34377_201503051500_GHS_ELIG_HSCB_20150305".DAT" 

@@ -1,0 +1,64 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Fri Oct 9 12:13:02 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\totalcarehealth\control\totalcarehealth.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\totalcarehealth\toprocess\TCHCensus.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\totalcarehealth\log\TCHCensus.xlsx.bad
+  Discard File: totalhealthcare.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_TOTAL_CARE_HEALTH_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+LAST_NM                             FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:last_nm)"
+FIRST_NM                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:first_nm)"
+EMPLOYEE_ID                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:employee_id)"
+GENDER_CD                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:gender_cd)"
+BIRTH_DT                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "decode(trim(lower(:birth_dt)), 'need', null, to_date(:birth_dt,  'mm/dd/yyyy'))"
+STATE_CD                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:state_cd)"
+LOCATION_CD                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:location_cd)"
+COMPANY_CD                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:company_cd)"
+RELATION_CD                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:relation_cd)"
+
+
+Table PERSON_TOTAL_CARE_HEALTH_RAW:
+  1410 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 148608 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:          1410
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Fri Oct 09 12:13:02 2015
+Run ended on Fri Oct 09 12:13:03 2015
+
+Elapsed time was:     00:00:00.16
+CPU time was:         00:00:00.00

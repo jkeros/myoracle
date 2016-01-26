@@ -1,0 +1,24 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Fri Feb 27 11:54:11 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+from hraweb.bio_2011_for_paper_hra_raw w where
+            *
+ERROR at line 2:
+ORA-00942: table or view does not exist
+
+
+ select h.serial_number, h.batch from hraweb.bio_2011_for_paper_hra_raw w, hra.hra_2008 h
+                                                                               *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options

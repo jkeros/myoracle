@@ -1,0 +1,82 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Thu Oct 22 23:30:10 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\totalcarehealth\control\totalcarehealth.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\totalcarehealth\toprocess\TotalCareHRATestData1.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\totalcarehealth\log\TotalCareHRATestData1.xlsx.bad
+  Discard File: totalhealthcare.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_TOTAL_CARE_HEALTH_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+LAST_NM                             FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:last_nm)"
+FIRST_NM                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:first_nm)"
+EMPLOYEE_ID                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:employee_id)"
+GENDER_CD                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:gender_cd)"
+BIRTH_DT                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "decode(trim(lower(:birth_dt)), 'need', null, to_date(:birth_dt,  'mm/dd/yyyy'))"
+STATE_CD                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:state_cd)"
+LOCATION_CD                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:location_cd)"
+COMPANY_CD                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:company_cd)"
+RELATION_CD                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "TRIM(:relation_cd)"
+
+Record 4: Discarded - all columns null.
+Record 5: Discarded - all columns null.
+Record 6: Discarded - all columns null.
+Record 7: Discarded - all columns null.
+Record 8: Discarded - all columns null.
+Record 9: Discarded - all columns null.
+Record 10: Discarded - all columns null.
+Record 11: Discarded - all columns null.
+Record 12: Discarded - all columns null.
+Record 13: Discarded - all columns null.
+Record 14: Discarded - all columns null.
+Record 15: Discarded - all columns null.
+Record 16: Discarded - all columns null.
+Record 17: Discarded - all columns null.
+Record 18: Discarded - all columns null.
+Record 19: Discarded - all columns null.
+Record 20: Discarded - all columns null.
+Record 21: Discarded - all columns null.
+
+Table PERSON_TOTAL_CARE_HEALTH_RAW:
+  3 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  18 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 148608 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            21
+Total logical records rejected:         0
+Total logical records discarded:       18
+
+Run began on Thu Oct 22 23:30:10 2015
+Run ended on Thu Oct 22 23:30:10 2015
+
+Elapsed time was:     00:00:00.75
+CPU time was:         00:00:00.07

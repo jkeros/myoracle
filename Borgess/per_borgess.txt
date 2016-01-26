@@ -1,0 +1,28 @@
+  CREATE  VIEW per_borgess ("CO", "COMPANY", "DEPARTMENT_ID", "DEPT", "EMP_ID", "NAME", "JOB_CODE", "JOB_TITLE", "HIRE_DATE", "FULL_PART", "ACTION", "ADDRESS_1", "ADDRESS_2", "CITY", "STATE", "POSTAL", "PHONE", "SEX", "CLIENT_ID", "LAST_NAME", "FIRST_NAME", "BIRTH_DATE", "WORK_EMAIL") AS 
+  select 
+COMPANY_CD          ,
+COMPANY_DESC        ,
+DEPARTMENT_ID       ,
+DEPT_CD             ,
+EMP_ID              ,
+NAME_TXT            ,
+JOB_CD              ,
+JOB_TITLE_DESC      ,
+HIRE_DT             ,       
+FULL_PART_IND       ,
+ACTION_IND          ,
+ADDRESS_1_TXT       ,
+ADDRESS_2_TXT       ,
+CITY_TXT            ,
+STATE_CD            ,
+POSTAL_CD           ,
+PHONE               ,
+GENDER_IND          ,
+company_cd CLIENT_ID           ,
+LAST_NM             ,
+FIRST_NM            ,
+DOB_DT              ,      
+WORK_EMAIL_CD    
+from per_borgess_raw where 
+to_char(update_dt,'yyyymmddhh24:mi:ss') || rowid   in (select max(to_char(update_dt,'yyyymmddhh24:mi:ss') || rowid)  from PER_borgess_raw
+group by emp_id, company_cd);

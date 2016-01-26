@@ -1,0 +1,95 @@
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV
+
+
+
+
+javac -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV.java 
+
+
+
+
+
+
+
+
+
+-cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar ExcelToCsv.java
+
+
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\\"Grand River Academy_ISBC_HRA Census_FINAL_20140813\".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\\"Grand River Academy_ISBC_HRA Census_FINAL_20140813\".csv 
+
+//////////////////////////////
+
+
+
+javac -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSVNonSchool.java 
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Grand River Academy_ISBC_HRA Census_FINAL_20140813".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Grand River Academy_ISBC_HRA Census_FINAL_20140813".csv 
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Riverside_HRA Census_Additions20141008".xls C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Riverside_HRA Census_Additions20141008".csv 2
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Lawrence School_ISBC_HRA Census_Additions_20140820".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Lawrence School_ISBC_HRA Census_Additions_20140820".csv 1
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"SMS_Census File_FINAL_20141021".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"SMS_Census File_FINAL_20141021".csv 1
+
+
+
+
+Riverside_HRA Census_Additions20141008
+
+
+
+C:\Users\hmrc_scheduler\classes>javac -cp C:\Users\hmrc_scheduler\classes\poi-bi
+n-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\cla
+sses\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\h
+mrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.
+1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.
+1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140
+818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV.java
+
+C:\Users\hmrc_scheduler\classes>java -cp C:\Users\hmrc_scheduler\classes\poi-bin
+-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\clas
+ses\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hm
+rc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1
+-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1
+\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-201408
+18\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_J
+obs\\Test\\oswald\\ToProcess\\"Grand River Academy_ISBC_HRA Census_FINAL_2014081
+3".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Grand River Acade
+my_ISBC_HRA Census_FINAL_20140813".csv
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Grand River Academy_ISBC_HRA Census_FINAL_20140813".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\GrandRiverAcademy_ISBC_HRACensus_FINAL_20140813.csv
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"Grand River Academy_ISBC_HRA Census_FINAL_20140813".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\GrandRiverAcademy_ISBC_HRACensus_FINAL_20140813.csv
+
+
+
+javac -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCsvBorgess.java 
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSVBorgess C:\\Automated_DataLoad_Jobs\\Test\\borgess\\ToProcess\\"Sept 10-15-14".xlsx C:\\Automated_DataLoad_Jobs\\Test\\borgess\\ToProcess\\"Sept 10-15-14".csv 1
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSVBorgess C:\\Automated_DataLoad_Jobs\\Test\\borgess\\ToProcess\\"testFNB 9-26-14".xlsx C:\\Automated_DataLoad_Jobs\\Test\\borgess\\ToProcess\\"testFNB 9-26-14".csv 1
+
+testFNB 9-26-14
+
+
+
+javac -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCsv.java 
+
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"testSMS_Census File_Additions_6_20141119".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"testSMS_Census File_Additions_6_20141119".csv 1
+
+
+java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;. ExcelToCSV C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"TESTUnited Producers_Census File_FINAL_20140929".xlsx C:\\Automated_DataLoad_Jobs\\Test\\oswald\\ToProcess\\"TESTUnited Producers_Census File_FINAL_20140929".csv 1
+
+
+TESTUnited Producers_Census File_FINAL_20140929
+testSMS_Census File_Additions_6_20141119

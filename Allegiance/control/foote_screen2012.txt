@@ -1,0 +1,22 @@
+options (skip=1)
+load data
+infile 'foote_screen2012.csv'
+badfile 'foote_screen.bad'
+discardfile 'foote_screen.dsc'
+append
+into table foote_screen12
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+EMPLOYEEID              char  "ltrim(trim(:EMPLOYEEID),'0')",
+LAST_NAME		char  "trim(:LAST_NAME)",
+FIRST_NAME		char  "trim(:FIRST_NAME)",
+HEIGHT             	INTEGER EXTERNAL   "trim(:HEIGHT)",
+WEIGHT             	INTEGER EXTERNAL   "trim(:WEIGHT)",
+SBP                     INTEGER EXTERNAL   "trim(:SBP)",
+DBP                     INTEGER EXTERNAL   "trim(:DBP)",
+waist                   INTEGER EXTERNAL   "trim(:waist)",
+enter_date              "sysdate",
+company_id              char "case when substr(trim(:employeeid),1,3) = 'MAC' then 'MACI' when substr(trim(:employeeid),1,1) not between '0' and '9' then substr(trim(:employeeid),1,3)
+                              else '001' end"
+)

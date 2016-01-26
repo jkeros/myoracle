@@ -1,0 +1,1 @@
+dir /o-d Z:\texashealth\"Processed by Automated download"\ > S:\"Automated Data Load Files"\texashealth\FilesLoaded.txt

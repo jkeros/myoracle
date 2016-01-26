@@ -1,0 +1,467 @@
+insert into foote_jck_per (id, first_name, last_name, dob, gender, address1, address2, city, state, zip, email, dept, year, date_added) 
+select id, first_name, last_name, dob,gender, address1, address2, city, state, zip_code,null,department,   iyl_year , trunc(sysdate) from foote.hmrc_personnel 
+where id like 'JCK%' and trunc(date_added) = trunc(sysdate) ;
+
+insert into foote_mac_per
+(ID               ,     
+LAST_NAME        , 
+FIRST_NAME       , 
+MIDDLE_NAME      ,  
+DEPT             ,  
+DOB              ,         
+GENDER           ,   
+ADDRESS1         , 
+ADDRESS2         , 
+CITY             , 
+STATE            ,  
+ZIP              ,       
+YEAR             ,  
+ENTER_DATE     ,
+membership_type_cd    )  
+select  
+ID                         ,   
+LAST_NAME                  ,  
+FIRST_NAME                 , 
+middle_name               ,      
+DEPartment                , 
+DOB                       ,         
+GENDER                     , 
+ADDRESS1                   , 
+ADDRESS2                   , 
+CITY                       ,
+STATE                      ,
+zip_code, 
+iyl_year,
+date_added,
+member_type
+from foote.hmrc_personnel
+where id like 'MACI%' and trunc(date_added) = trunc(sysdate) ;
+
+
+insert into foote_bre_per
+(ID               ,     
+LAST_NAME        , 
+FIRST_NAME       , 
+DEPT             ,  
+DOB              ,         
+GENDER           ,   
+ADDRESS         , 
+CITY             , 
+STATE            ,  
+ZIP              ,       
+YEAR             ,  
+ENTER_DATE        )  
+select  
+ID                         ,   
+LAST_NAME                  ,  
+FIRST_NAME                 ,     
+DEPartment                , 
+DOB                       ,         
+GENDER                     , 
+ADDRESS1                   , 
+CITY                       ,
+STATE                      ,
+zip_code, 
+iyl_year,
+date_added
+from foote.hmrc_personnel
+where id like 'BRE%' and trunc(date_added) = trunc(sysdate);
+
+insert into foote_rmg_per
+(
+ID           ,
+FIRST_NAME       ,
+LAST_NAME        ,
+ADDRESS1        ,
+CITY             ,
+STATE          ,    
+ZIP             ,    
+DOB             ,       
+PHONE            ,
+GENDER          ,    
+LOCATION         ,      
+ADDRESS2         ,
+DEPT             ,  
+YEAR            
+)
+select 
+ID,
+FIRST_NAME  ,
+LAST_NAME ,
+ADDRESS1  ,
+CITY             ,
+STATE          ,    
+ZIP_code,
+dob,
+null,
+gender, 
+null,
+address2, 
+department,
+iyl_year
+From foote.hmrc_personnel
+where trunc(date_added) = trunc(sysdate ) 
+and id like 'RMG%';
+
+insert into foote_jax_per
+(ID               ,     
+LAST_NAME        , 
+FIRST_NAME       , 
+MIDDLE_init      ,  
+DEPT             ,  
+DOB              ,          
+ADDRESS         , 
+CITY             , 
+STATE            ,  
+ZIP              ,       
+YEAR                )  
+select  
+ID                         ,   
+LAST_NAME                  ,  
+FIRST_NAME                 , 
+middle_name               ,      
+DEPartment                , 
+DOB                       ,          
+ADDRESS1                   , 
+CITY                       ,
+STATE                      ,
+zip_code, 
+iyl_year
+from foote.hmrc_personnel
+where id like 'JAX%'
+and trunc(date_added) = trunc(sysdate ) ;
+
+insert into foote_gli_per 
+(
+id, first_name, last_name, address, city, state, zip, dob, dept, year          )
+select  
+ID            ,  
+FIRST_NAME            , 
+LAST_NAME             ,    
+ADDRESS1              , 
+CITY                  , 
+STATE                 ,     
+ZIP_code                   , 
+dob,
+department             ,  
+iyl_YEAR                     
+   from foote.hmrc_personnel where id like 'GLI%' and trunc(date_added) = trunc(sysdate);
+
+
+insert into foote_lws_per (
+id, first_name, last_name, ssn_masked, dob, address, city, state, zip, year, dept, date_added)
+select id, first_name, last_name, ssn, dob, address1, city, state, zip_code, iyl_year,department, date_added from foote.hmrc_personnel
+where id like 'LWS%' and trunc(date_added) = trunc(sysdate);
+
+
+insert into 
+foote_cpf_per
+(
+ID              ,
+FIRST_NAME      ,
+LAST_NAME      , 
+ADDRESS         ,
+CITY           , 
+STATE         ,     
+ZIP           ,     
+DOB            ,         
+EMAIL         ,  
+DEPT         ,  
+YEAR        ) 
+select 
+ID              ,
+FIRST_NAME      ,
+LAST_NAME      , 
+ADDRESS1         ,
+CITY           , 
+STATE         ,     
+ZIP_code           ,     
+DOB            ,         
+EMAIL         ,   
+DEPartment         , 
+iyl_year
+from foote.hmrc_personnel where id like 'CPF%'
+and trunc(date_added) = trunc(sysdate) ;
+
+insert into foote_eec_per
+(
+ID              ,
+FIRST_NAME      ,
+LAST_NAME      ,
+ADDRESS        ,
+CITY           ,
+STATE          ,  
+ZIP           ,   
+DOB            ,    
+GENDER         ,     
+EMAIL          ,
+YEAR            ,   
+DEPT            
+) 
+select ID              ,
+FIRST_NAME      ,
+LAST_NAME      ,
+ADDRESS1        ,
+CITY           ,
+STATE          ,  
+ZIP_code           ,   
+DOB            ,    
+GENDER         ,     
+EMAIL          ,
+iyl_YEAR            ,   
+DEPartment             from foote.hmrc_personnel 
+where trunc(date_added) = trunc(sysdate) and id like 'MCCU%';
+
+insert into foote.foote_jff_per
+(
+ID              ,
+FIRST_NAME      ,
+LAST_NAME      ,
+ADDRESS        ,
+CITY           ,
+STATE          ,  
+ZIP           ,   
+DOB            ,    
+YEAR            ,   
+DEPT            
+) 
+select ID              ,
+FIRST_NAME      ,
+LAST_NAME      ,
+ADDRESS1        ,
+CITY           ,
+STATE          ,  
+ZIP_code           ,   
+DOB            ,    
+iyl_YEAR            ,   
+DEPartment             from foote.hmrc_personnel 
+where trunc(date_added) = trunc(sysdate) and id like 'JFF%';
+
+
+
+
+insert into foote.foote_polc_per
+(
+ID              ,
+FIRST_NAME      ,
+LAST_NAME      ,
+ADDRESS        ,
+CITY           ,
+STATE          ,  
+ZIP           ,   
+DOB            ,    
+YEAR            ,   
+DEPT            
+) 
+select ID              ,
+FIRST_NAME      ,
+LAST_NAME      ,
+ADDRESS1        ,
+CITY           ,
+STATE          ,  
+ZIP_code           ,   
+DOB            ,    
+iyl_YEAR            ,   
+DEPartment             from foote.hmrc_personnel 
+where trunc(date_added) = trunc(sysdate) and company_id like 'POLC%';
+
+
+insert into foote_axi_per(
+IYL_YEAR                   ,   
+ID                         ,  
+MEMBER_TYPE                ,   
+SSN                        ,   
+FIRST_NAME                 ,  
+MIDDLE_NAME                ,  
+LAST_NAME                  ,  
+DOB                        ,          
+DEPT                       , 
+DEPARTMENT                 , 
+SERVICE_AREA               , 
+SHIFT                      , 
+GENDER                     , 
+ADDRESS1                   , 
+ADDRESS2                   , 
+CITY                       , 
+STATE                      , 
+ZIP_CODE                   ,         
+DATE_ADDED )
+select
+IYL_YEAR                   ,   
+ID                         ,  
+MEMBER_TYPE                ,   
+SSN                        ,   
+FIRST_NAME                 ,  
+MIDDLE_NAME                ,  
+LAST_NAME                  ,  
+DOB                        ,          
+DEPT                       , 
+DEPARTMENT                 , 
+SERVICE_AREA               , 
+SHIFT                      , 
+GENDER                     , 
+ADDRESS1                   , 
+ADDRESS2                   , 
+CITY                       , 
+STATE                      , 
+ZIP_CODE                   ,         
+DATE_ADDED 
+from foote.hmrc_personnel
+where trunc(date_added) = trunc(sysdate)
+and id like 'AXI%';   
+
+
+
+
+insert into foote.foote_rwm_per
+(
+ID              , 
+FIRST_NAME      , 
+LAST_NAME       , 
+ADDRESS         , 
+CITY            , 
+STATE           ,     
+ZIP             , 
+DOB             ,         
+GENDER          , 
+DATE_ADDED         
+)
+select
+ID              , 
+FIRST_NAME      , 
+LAST_NAME       , 
+ADDRESS1         , 
+CITY            , 
+STATE           ,     
+ZIP_code             , 
+DOB             ,         
+GENDER          , 
+DATE_ADDED         
+from foote.hmrc_personnel
+ where trunc(date_added) = trunc(sysdate)
+and id like 'RWM%';  
+
+
+insert into foote_orb_per
+(
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPT            ,  
+YEAR            ,      
+ZIP                  
+)
+select 
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS1         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPartment            ,  
+iyl_YEAR            ,      
+ZIP_code from foote.hmrc_personnel where id like 'ORB%' and trunc(date_added) = trunc(sysdate);
+
+insert into foote_ppi_per 
+(
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPT            ,  
+YEAR            ,      
+ZIP ,
+gender, 
+ member_type                
+)
+select 
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS1         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPartment            ,  
+iyl_YEAR            ,      
+ZIP_code, gender, member_type from foote.hmrc_personnel where id like 'PPI%' and trunc(date_added) = trunc(sysdate);
+
+
+insert into foote_SCMW_per 
+(
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPT            ,  
+YEAR            ,      
+ZIP ,
+gender, 
+ member_type                
+)
+select 
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+ADDRESS1         ,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPartment            ,  
+iyl_YEAR            ,      
+ZIP_code, gender, member_type from foote.hmrc_personnel where id like 'SCMW%' and trunc(date_added) = trunc(sysdate);
+
+
+
+insert into foote_che_per 
+(
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+middle_init,
+ADDRESS         ,
+address2,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPT            ,  
+YEAR            ,      
+ZIP ,
+gender, 
+ member_type                
+)
+select 
+ID              ,  
+FIRST_NAME      ,
+LAST_NAME       ,
+middle_name,
+ADDRESS1         ,
+address2,
+CITY            ,
+STATE           ,      
+DOB             ,        
+EMAIL           ,
+DEPartment            ,  
+iyl_YEAR            ,      
+ZIP_code, gender, member_type from foote.hmrc_personnel where id like 'CHE%' and trunc(date_added) = trunc(sysdate);
+
+
+exit;

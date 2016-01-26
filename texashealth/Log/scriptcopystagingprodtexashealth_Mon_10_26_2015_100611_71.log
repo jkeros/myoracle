@@ -1,0 +1,44 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Mon Oct 26 10:06:11 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+
+110 rows created.
+
+
+2 rows created.
+
+
+Commit complete.
+
+
+COM
+---
+COMPANY_DESC
+--------------------------------------------------------------------------------
+CLIENT_CD	     CREATE_DT CREATED_BY
+-------------------- --------- ------------------------------
+AZL
+AZLE ELEMENTARY
+TS		     26-OCT-15 HRAWEB
+
+LIB
+LIBERTY ELEMENTARY
+TS		     26-OCT-15 HRAWEB
+
+COM
+---
+COMPANY_DESC
+--------------------------------------------------------------------------------
+CLIENT_CD	     CREATE_DT CREATED_BY
+-------------------- --------- ------------------------------
+
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options

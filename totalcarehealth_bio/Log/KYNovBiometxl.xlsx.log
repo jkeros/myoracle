@@ -1,0 +1,61 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Wed Nov 25 16:01:32 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\totalcarehealth_bio\control\totalcarehealth_bio.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\totalcarehealth_bio\toprocess\KYNovBiometxl.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\totalcarehealth_bio\log\KYNovBiometxl.xlsx.bad
+  Discard File: bio_dsc.txt 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+Silent options: FEEDBACK, ERRORS and DISCARDS
+
+Table BIO_2011_RAW, loaded from every logical record.
+Insert option in effect for this table: REPLACE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMPLOYEE_ID                         FIRST     *   ,  O(") CHARACTER            
+LASTNAME                             NEXT     *   ,  O(") CHARACTER            
+FIRSTNAME                            NEXT     *   ,  O(") CHARACTER            
+GENDER                               NEXT     *   ,  O(") CHARACTER            
+DOB                                  NEXT     *   ,  O(") DATE mm/dd/rr        
+GLUCOSE                              NEXT     *   ,  O(") CHARACTER            
+CHOLESTEROL                          NEXT     *   ,  O(") CHARACTER            
+TRIGLYCERIDES                        NEXT     *   ,  O(") CHARACTER            
+HDL                                  NEXT     *   ,  O(") CHARACTER            
+LDL                                  NEXT     *   ,  O(") CHARACTER            
+HEIGHT                               NEXT     *   ,  O(") CHARACTER            
+WEIGHT                               NEXT     *   ,  O(") CHARACTER            
+SBP                                  NEXT     *   ,  O(") CHARACTER            
+DBP                                  NEXT     *   ,  O(") CHARACTER            
+
+
+Table BIO_2011_RAW:
+  162 Rows successfully loaded.
+  8 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 231168 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:           170
+Total logical records rejected:         8
+Total logical records discarded:        0
+
+Run began on Wed Nov 25 16:01:32 2015
+Run ended on Wed Nov 25 16:01:32 2015
+
+Elapsed time was:     00:00:00.21
+CPU time was:         00:00:00.07

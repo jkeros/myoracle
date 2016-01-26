@@ -1,0 +1,70 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Thu Jan 29 16:04:36 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\ccc\control\ccc.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\ccc\toprocess\HRACensusReport_20150120_104510t.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\ccc\log\HRACensusReport_20150120_104510t.xlsx.bad
+  Discard File: per_dsc.txt 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+Silent options: FEEDBACK, ERRORS and DISCARDS
+
+Table PERSONNEL_UPDATE_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EE_ID                               FIRST     *   ,  O(") CHARACTER            
+SSN4_ID                              NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "lpad(:SSN4_id,4,'0')"
+SSN_ID                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "lpad(:SSN_id,9,'0')"
+LAST_NM                              NEXT     *   ,  O(") CHARACTER            
+FIRST_NM                             NEXT     *   ,  O(") CHARACTER            
+MIDDLE_NM                            NEXT     *   ,  O(") CHARACTER            
+DOB_DT                               NEXT     *   ,  O(") DATE mm/dd/yyyy      
+CUR_DOH_DT                           NEXT     *   ,  O(") DATE mm/dd/yyyy      
+CLASS_CD                             NEXT     *   ,  O(") CHARACTER            
+CLASS_DESC                           NEXT     *   ,  O(") CHARACTER            
+PLAN_CD                              NEXT     *   ,  O(") CHARACTER            
+WORK_STATUS_IND                      NEXT     *   ,  O(") CHARACTER            
+COVERAGE_CD                          NEXT     *   ,  O(") CHARACTER            
+EFF_DT                               NEXT     *   ,  O(") DATE mm/dd/yyyy      
+ANNL_PREMIUM_AMT                     NEXT     *   ,  O(") CHARACTER            
+ANNL_EE_CONTRIB_AMT                  NEXT     *   ,  O(") CHARACTER            
+GENDER_IND                           NEXT     *   ,  O(") CHARACTER            
+CAMPUS_CD                            NEXT     *   ,  O(") CHARACTER            
+ORG_CD                               NEXT     *   ,  O(") CHARACTER            
+ORG_DESC                             NEXT     *   ,  O(") CHARACTER            
+
+value used for ROWS parameter changed from 64 to 49
+
+Table PERSONNEL_UPDATE_RAW:
+  4791 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 252840 bytes(49 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:          4791
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Thu Jan 29 16:04:36 2015
+Run ended on Thu Jan 29 16:04:36 2015
+
+Elapsed time was:     00:00:00.42
+CPU time was:         00:00:00.07

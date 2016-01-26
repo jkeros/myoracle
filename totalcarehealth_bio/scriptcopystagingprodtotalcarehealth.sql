@@ -1,0 +1,128 @@
+insert into bio_2011_raw2(
+ UNIQUE_ID,
+ COMPANY_ID,
+ LAST_NAME,
+ FIRST_NAME,
+ GROUP_ID#,
+ RELATIONSHIP_CODE,
+ SEX,
+ BIRTH_DATE,
+ BIRTH_YEAR,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT,
+ WAIST_CIRCUMFERENCE,
+ SBP,
+ DBP,
+ PULSE,
+ NONFAST_GLUCOSE,
+ FAST_GLUCOSE,
+ CHOLESTEROL,
+ HDL,
+ LDL,
+ TRIGLYCERIDES,
+ BODYFAT,
+ PSA,
+ HBA1C,
+ BIO_DATE,
+ RECEIVE_DATE)
+select 
+trim(leading '0' from employee_id),
+1188,
+lastname,
+firstname,
+'KYNOV',
+null,
+decode(GENDER,'M',1,'1',1,'F',2,'2',2) sex,
+DOB,
+to_char(dob,'yyyy'),
+trunc(height/12) feet,
+mod(height,12) inches,
+weight,
+null,
+SBP,
+DBP,
+null,
+null,
+GLUCOSE,
+CHOLESTEROL,
+HDL,
+LDL,
+TRIGLYCERIDES,
+null,
+null,
+null,
+null,
+trunc(sysdate)
+from hmrc_loader.bio_2011_raw@hmr2_oracle;
+
+insert into bio_2011(
+ UNIQUE_ID,
+ COMPANY_ID,
+ LAST_NAME,
+ FIRST_NAME,
+ GROUP_ID#,
+ RELATIONSHIP_CODE,
+ SEX,
+ BIRTH_DATE,
+ BIRTH_YEAR,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT,
+ WAIST_CIRCUMFERENCE,
+ SBP,
+ DBP,
+ PULSE,
+ NONFAST_GLUCOSE,
+ FAST_GLUCOSE,
+ CHOLESTEROL,
+ HDL,
+ LDL,
+ TRIGLYCERIDES,
+ BODYFAT,
+ PSA,
+ HBA1C,
+ BIO_DATE,
+ RECEIVE_DATE)
+select 
+ UNIQUE_ID,
+ COMPANY_ID,
+ LAST_NAME,
+ FIRST_NAME,
+ GROUP_ID#,
+ RELATIONSHIP_CODE,
+ SEX,
+ BIRTH_DATE,
+ BIRTH_YEAR,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT,
+ WAIST_CIRCUMFERENCE,
+ SBP,
+ DBP,
+ PULSE,
+ NONFAST_GLUCOSE,
+ FAST_GLUCOSE,
+ CHOLESTEROL,
+ HDL,
+ LDL,
+ TRIGLYCERIDES,
+ BODYFAT,
+ PSA,
+ HBA1C,
+ BIO_DATE,
+ RECEIVE_DATE
+from bio_2011_raw2
+where trunc(receive_date) = trunc(sysdate) and
+to_char(receive_date, 'yyyymmdd') || rowid in 
+(select max(to_char(receive_date,'yyyymmdd') || rowid)  from bio_2011_raw2
+group by unique_id, receive_date);
+commit;
+
+exit;
+
+
+
+
+
+

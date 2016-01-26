@@ -1,0 +1,14 @@
+
+C:\Windows\system32>set _my_datetime=Wed 02/25/2015_ 8:48:51.08 
+
+C:\Windows\system32>set _my_datetime=Wed_02/25/2015__8:48:51.08 
+
+C:\Windows\system32>set _my_datetime=Wed_02/25/2015__84851.08 
+
+C:\Windows\system32>set _my_datetime=Wed_02_25_2015__84851.08 
+
+C:\Windows\system32>set _my_datetime=Wed_02_25_2015__84851_08 
+
+C:\Windows\system32>sqlplus /@hra_oracle @c:\AutoMated_DataLoad_Jobs\test\wright_check\scriptcopystagingprodwrightcheck.sql  1>c:\AutoMated_DataLoad_Jobs\TEST\wright_check\LOG\scriptcopystagingprodwrightcheck_Wed_02_25_2015__84851_08.log 
+
+C:\Windows\system32>C:\Automated_DataLoad_Jobs\Test\wright_check\wrightcheckdir.bat  1>c:\AutoMated_DataLoad_Jobs\TEST\wright_check\LOG\dir_Wed_02_25_2015__84851_08.out 

@@ -1,0 +1,79 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Wed Jul 22 14:30:33 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AUTOMA~1\Test\ALLEGI~1\control\retail.ctl
+Data File:      C:\Automated_DataLoad_Jobs\Test\Allegiance\toprocess\CityofChelseaHRAEligible2015.csv
+  Bad File:     New hires 11.8.13.bad
+  Discard File: New hires 11.8.13.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table HMRC_PERSONNEL, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+IYL_YEAR                            FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:IYL_YEAR)"
+COMPANY_ID                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:COMPANY_ID)"
+ID                                   NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(ltrim(:ID,'0'))"
+MEMBER_TYPE                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:MEMBER_TYPE)"
+FIRST_NAME                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:FIRST_NAME)"
+MIDDLE_NAME                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:MIDDLE_NAME)"
+LAST_NAME                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:LAST_NAME)"
+DOB                                  NEXT     *   ,  O(") DATE fmmm/dd/yyyy    
+    SQL string for column : "trim(:DOB)"
+DEPARTMENT                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:DEPARTMENT)"
+GENDER                               NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:GENDER)"
+ADDRESS1                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ADDRESS1)"
+ADDRESS2                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ADDRESS2)"
+CITY                                 NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:CITY)"
+STATE                                NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:STATE)"
+ZIP_CODE                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:ZIP_CODE)"
+DATE_ADDED                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "sysdate"
+
+value used for ROWS parameter changed from 64 to 62
+
+Table HMRC_PERSONNEL:
+  33 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 255936 bytes(62 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            33
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Wed Jul 22 14:30:33 2015
+Run ended on Wed Jul 22 14:30:34 2015
+
+Elapsed time was:     00:00:00.91
+CPU time was:         00:00:00.08

@@ -1,0 +1,43 @@
+CREATE OR REPLACE FORCE VIEW "HRAWEB"."BIO_2011_FOR_PAPER_HRA" ("UNIQUE_ID", "BIO_SERIAL", "COMPANY_ID", "LAST_NAME", "FIRST_NAME", "GROUP_ID#", "RELATIONSHIP_CODE", "SEX", "BIRTH_DATE", "BIRTH_YEAR", "HEIGHT_FEET", "HEIGHT_INCHES", "WEIGHT", "WAIST_CIRCUMFERENCE", "SBP", "DBP", "PULSE", "NONFAST_GLUCOSE", "FAST_GLUCOSE", "CHOLESTEROL", "HDL", "LDL", "TRIGLYCERIDES", "BODYFAT", "PSA", "HBA1C", "BIO_DATE", "RECEIVE_DATE", "HRA_SERIAL", "SSN") AS 
+  select "UNIQUE_ID","BIO_SERIAL","COMPANY_ID","LAST_NM","FIRST_NM","GROUP_ID","RELATIONSHIP_CD","GENDER_IND","BIRTH_DT","BIRTH_YEAR","HEIGHT_FEET","HEIGHT_INCHES","WEIGHT","WAIST_CIRCUMFERENCE","SBP","DBP","PULSE","NONFAST_GLUCOSE","FAST_GLUCOSE","CHOLESTEROL","HDL","LDL","TRIGLYCERIDES","BODYFAT","PSA","HBA1C","BIO_DT","RECEIVE_DT","HRA_SERIAL","SSN_ID" from  bio_2011_for_paper_hra_raw 
+where 
+  to_char(update_Dt,'yyyymmdd') || rowid 
+ in (select max (cstring) 
+from (select to_char(update_Dt,'yyyymmdd') || rowid cstring,
+UNIQUE_ID                , 
+BIO_SERIAL               ,
+decode(COMPANY_ID,'CBT', '1039W', company_id) company_id              ,
+LAST_Nm              ,
+FIRST_Nm               ,
+group_id              , 
+RELATIONSHIP_Cd     , 
+gender_ind                   ,
+BIRTH_Dt          ,        
+BIRTH_YEAR              , 
+HEIGHT_FEET              ,       
+HEIGHT_INCHES            ,       
+WEIGHT                   ,       
+WAIST_CIRCUMFERENCE      ,       
+SBP                      ,       
+DBP                      ,       
+PULSE                    ,       
+NONFAST_GLUCOSE          ,       
+FAST_GLUCOSE             ,       
+CHOLESTEROL              ,       
+HDL                      ,       
+LDL                      ,       
+TRIGLYCERIDES            ,       
+BODYFAT                  ,       
+PSA                      ,       
+HBA1C                    ,       
+BIO_Dt               ,        
+RECEIVE_Dt           ,      
+HRA_SERIAL           ,
+SSN_id                     from bio_2011_for_paper_hra_raw 
+where 
+  to_char(update_dt,'yyyymmdd') || rowid  
+ in (select max(to_char(update_dt,'yyyymmdd') || rowid)  
+from bio_2011_for_paper_hra_raw
+group by unique_id,  trunc(receive_dt))
+)
+group by unique_id,  trunc(bio_dt));

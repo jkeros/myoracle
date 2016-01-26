@@ -1,0 +1,373 @@
+create or replace view vw_sandia_toload 
+(
+ PERSON_ID,
+ VHM_SEQ_ID,
+ SNLID,
+ FIRST_NAME,
+ LAST_NAME,
+ RELATION_CODE,
+ GENDER,
+ LAST4SSN,
+ BIRTH_DATE,
+ HEIGHT_DATE,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT_DATE,
+ WEIGHT,
+ BMI_DATE,
+ BMI,
+ WAIST_DATE,
+ WAIST,
+ BP_DATE,
+ SBP,
+ DBP,
+ GLUCOSE_DATE,
+ FASTGLUCOSE,
+ CHOLESTEROL_DATE,
+ CHOLESTEROL,
+ HDL_DATE,
+ HDL,
+ LDL_DATE,
+ LDL,
+ TRIGLYCERIDES_DATE,
+ TRIGLYCERIDES,
+ HBA1C_DATE,
+ HBA1C,
+ BODYFAT_DATE,
+ BODYFAT,
+ ILL_HOURS,
+ INCIDENT,
+ INCIDENT_CAUSE,
+ DMC,
+ receive_date)
+as 
+select
+regexp_replace(upper(lastname), '[^[:alnum:]]', '')||lpad(last4ssn,4,'0')||to_char(dob,'yyyymm') person_id,
+ VHM_SEQ_ID,
+ SNLID,
+upper(FIRSTNAME) first_name,
+upper(LASTNAME) last_name,
+ RELATIONCODE,
+ GENDER,
+lpad(LAST4SSN,4,'0') last4ssn,
+ dob,
+ HEIGHTDATE,
+ HEIGHTFEET,
+ HEIGHTINCHES,
+ WEIGHTDATE,
+ WEIGHT,
+ BMIDATE,
+ BMI,
+ WAISTDATE,
+ WAIST,
+ BPDATE,
+ SBP,
+ DBP,
+ GLUCOSEDATE,
+ FASTGLUCOSE,
+ CHOLESTEROLDATE,
+ CHOLESTEROL,
+ HDLDATE,
+ HDL,
+ LDLDATE,
+ LDL,
+ TRIGLYCERIDESDATE,
+ TRIGLYCERIDES,
+ A1CDATE,
+case when hba1c<20 then hba1c end HBA1C,
+ BODYFATDATE,
+ BODYFAT,
+ ILLHOURS,
+ INCIDENT,
+ INCIDENTCAUSE,
+ DMC,
+ next_day(sysdate, 'TUESDAY') -7 receive_date
+from hmrc_loader.person_sandia_raw@hmr2_oracle
+where 
+ trunc(create_dt) = trunc(sysdate) and
+(HEIGHTDATE is not null or
+HEIGHTFEET is not null or
+HEIGHTINCHES is not null or
+WEIGHTDATE is not null or
+WEIGHT is not null or
+BMIDATE is not null or
+BMI is not null or
+WAISTDATE is not null or
+WAIST is not null or
+BPDATE is not null or
+SBP is not null or
+DBP is not null or
+GLUCOSEDATE is not null or
+FASTGLUCOSE is not null or
+CHOLESTEROLDATE is not null or
+CHOLESTEROL is not null or
+HDLDATE is not null or
+HDL is not null or
+LDLDATE is not null or
+LDL is not null or
+TRIGLYCERIDESDATE is not null or
+TRIGLYCERIDES is not null or
+A1CDATE is not null or
+HBA1C is not null or
+BODYFATDATE is not null or
+BODYFAT is not null or
+ILLHOURS is not null or
+INCIDENT is not null or
+INCIDENTCAUSE is not null)
+;
+
+
+create or replace view vw_sandia_toload_bio 
+as
+(select * from vw_sandia_toload where (PERSON_ID|| ' ' ||
+ SNLID|| ' ' ||
+ FIRST_NAME|| ' ' ||
+ LAST_NAME|| ' ' ||
+ RELATION_CODE|| ' ' ||
+ GENDER|| ' ' ||
+ LAST4SSN|| ' ' ||
+ BIRTH_DATE|| ' ' ||
+ HEIGHT_DATE|| ' ' ||
+ HEIGHT_FEET|| ' ' ||
+ HEIGHT_INCHES|| ' ' ||
+ WEIGHT_DATE|| ' ' ||
+ WEIGHT|| ' ' ||
+ BMI_DATE|| ' ' ||
+ BMI|| ' ' ||
+ WAIST_DATE|| ' ' ||
+ WAIST|| ' ' ||
+ BP_DATE|| ' ' ||
+ SBP|| ' ' ||
+ DBP|| ' ' ||
+ GLUCOSE_DATE|| ' ' ||
+ FASTGLUCOSE|| ' ' ||
+ CHOLESTEROL_DATE|| ' ' ||
+ CHOLESTEROL|| ' ' ||
+ HDL_DATE|| ' ' ||
+ HDL|| ' ' ||
+ LDL_DATE|| ' ' ||
+ LDL|| ' ' ||
+ TRIGLYCERIDES_DATE|| ' ' ||
+ TRIGLYCERIDES|| ' ' ||
+ HBA1C_DATE|| ' ' ||
+ HBA1C|| ' ' ||
+ BODYFAT_DATE|| ' ' ||
+ BODYFAT|| ' ' ||
+ ILL_HOURS|| ' ' ||
+ INCIDENT|| ' ' ||
+ INCIDENT_CAUSE|| ' ' ||
+ DMC)  in 
+(
+select 
+PERSON_ID|| ' ' ||
+ SNLID|| ' ' ||
+ FIRST_NAME|| ' ' ||
+ LAST_NAME|| ' ' ||
+ RELATION_CODE|| ' ' ||
+ GENDER|| ' ' ||
+ LAST4SSN|| ' ' ||
+ BIRTH_DATE|| ' ' ||
+ HEIGHT_DATE|| ' ' ||
+ HEIGHT_FEET|| ' ' ||
+ HEIGHT_INCHES|| ' ' ||
+ WEIGHT_DATE|| ' ' ||
+ WEIGHT|| ' ' ||
+ BMI_DATE|| ' ' ||
+ BMI|| ' ' ||
+ WAIST_DATE|| ' ' ||
+ WAIST|| ' ' ||
+ BP_DATE|| ' ' ||
+ SBP|| ' ' ||
+ DBP|| ' ' ||
+ GLUCOSE_DATE|| ' ' ||
+ FASTGLUCOSE|| ' ' ||
+ CHOLESTEROL_DATE|| ' ' ||
+ CHOLESTEROL|| ' ' ||
+ HDL_DATE|| ' ' ||
+ HDL|| ' ' ||
+ LDL_DATE|| ' ' ||
+ LDL|| ' ' ||
+ TRIGLYCERIDES_DATE|| ' ' ||
+ TRIGLYCERIDES|| ' ' ||
+ HBA1C_DATE|| ' ' ||
+ HBA1C|| ' ' ||
+ BODYFAT_DATE|| ' ' ||
+ BODYFAT|| ' ' ||
+ ILL_HOURS|| ' ' ||
+ INCIDENT|| ' ' ||
+ INCIDENT_CAUSE|| ' ' ||
+ DMC
+from 
+(
+select
+ PERSON_ID,
+ --VHM_SEQ_ID,
+ SNLID,
+ FIRST_NAME,
+ LAST_NAME,
+ RELATION_CODE,
+ GENDER,
+ LAST4SSN,
+ BIRTH_DATE,
+ HEIGHT_DATE,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT_DATE,
+ WEIGHT,
+ BMI_DATE,
+ BMI,
+ WAIST_DATE,
+ WAIST,
+ BP_DATE,
+ SBP,
+ DBP,
+ GLUCOSE_DATE,
+ FASTGLUCOSE,
+ CHOLESTEROL_DATE,
+ CHOLESTEROL,
+ HDL_DATE,
+ HDL,
+ LDL_DATE,
+ LDL,
+ TRIGLYCERIDES_DATE,
+ TRIGLYCERIDES,
+ HBA1C_DATE,
+ HBA1C,
+ BODYFAT_DATE,
+ BODYFAT,
+ ILL_HOURS,
+ INCIDENT,
+ INCIDENT_CAUSE,
+ DMC
+from vw_sandia_toload 
+minus
+select
+ PERSON_ID,
+ --VHM_SEQ_ID,
+ SNLID,
+ FIRST_NAME,
+ LAST_NAME,
+ RELATION_CODE,
+ GENDER,
+ LAST4SSN,
+ BIRTH_DATE,
+ HEIGHT_DATE,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT_DATE,
+ WEIGHT,
+ BMI_DATE,
+ BMI,
+ WAIST_DATE,
+ WAIST,
+ BP_DATE,
+ SBP,
+ DBP,
+ GLUCOSE_DATE,
+ FASTGLUCOSE,
+ CHOLESTEROL_DATE,
+ CHOLESTEROL,
+ HDL_DATE,
+ HDL,
+ LDL_DATE,
+ LDL,
+ TRIGLYCERIDES_DATE,
+ TRIGLYCERIDES,
+ HBA1C_DATE,
+ HBA1C,
+ BODYFAT_DATE,
+ BODYFAT,
+ ILL_HOURS,
+ INCIDENT,
+ INCIDENT_CAUSE,
+ DMC
+from sandia_bio_2011)));
+
+
+
+create or replace view vw_sandia_toload_bioo 
+as
+(
+select
+ PERSON_ID,
+ --VHM_SEQ_ID,
+ SNLID,
+ FIRST_NAME,
+ LAST_NAME,
+ RELATION_CODE,
+ GENDER,
+ LAST4SSN,
+ BIRTH_DATE,
+ HEIGHT_DATE,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT_DATE,
+ WEIGHT,
+ BMI_DATE,
+ BMI,
+ WAIST_DATE,
+ WAIST,
+ BP_DATE,
+ SBP,
+ DBP,
+ GLUCOSE_DATE,
+ FASTGLUCOSE,
+ CHOLESTEROL_DATE,
+ CHOLESTEROL,
+ HDL_DATE,
+ HDL,
+ LDL_DATE,
+ LDL,
+ TRIGLYCERIDES_DATE,
+ TRIGLYCERIDES,
+ HBA1C_DATE,
+ HBA1C,
+ BODYFAT_DATE,
+ BODYFAT,
+ ILL_HOURS,
+ INCIDENT,
+ INCIDENT_CAUSE,
+ DMC
+from vw_sandia_toload 
+minus
+select
+ PERSON_ID,
+ --VHM_SEQ_ID,
+ SNLID,
+ FIRST_NAME,
+ LAST_NAME,
+ RELATION_CODE,
+ GENDER,
+ LAST4SSN,
+ BIRTH_DATE,
+ HEIGHT_DATE,
+ HEIGHT_FEET,
+ HEIGHT_INCHES,
+ WEIGHT_DATE,
+ WEIGHT,
+ BMI_DATE,
+ BMI,
+ WAIST_DATE,
+ WAIST,
+ BP_DATE,
+ SBP,
+ DBP,
+ GLUCOSE_DATE,
+ FASTGLUCOSE,
+ CHOLESTEROL_DATE,
+ CHOLESTEROL,
+ HDL_DATE,
+ HDL,
+ LDL_DATE,
+ LDL,
+ TRIGLYCERIDES_DATE,
+ TRIGLYCERIDES,
+ HBA1C_DATE,
+ HBA1C,
+ BODYFAT_DATE,
+ BODYFAT,
+ ILL_HOURS,
+ INCIDENT,
+ INCIDENT_CAUSE,
+ DMC
+from sandia_bio_2011);

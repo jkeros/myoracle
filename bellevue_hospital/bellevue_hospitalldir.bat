@@ -1,0 +1,1 @@
+dir /o-d Z:\bellevue_hospital\"Processed by Automated download"\ > S:\"Automated Data Load Files"\bellevue_hospital\FilesLoaded.txt

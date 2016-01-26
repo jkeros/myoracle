@@ -1,0 +1,20 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Wed Jan 28 16:50:06 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+
+Array fetch/bind size is 15. (arraysize is 15)
+Will commit when done. (copycommit is 0)
+Maximum long size is 80. (long is 80)
+   4724 rows selected from julieker[hmrc_loader]@dware_oracle.
+   4724 rows inserted into PERSONNEL_UPDATE_RAW.
+   4724 rows committed into PERSONNEL_UPDATE_RAW at DEFAULT HOST connection.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options

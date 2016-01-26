@@ -1,0 +1,25 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Mon Oct 26 14:37:20 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+
+56 rows created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+ALJ AZLE JUNIOR HIGH SOUTH
+
+ALJ AZLE JUNIOR HIGH SOUTH
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options

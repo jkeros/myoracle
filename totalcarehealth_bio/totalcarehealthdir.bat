@@ -1,0 +1,1 @@
+dir /o-d Z:\totalcarehealth\"Processed by Automated download"\ > S:\"Automated Data Load Files"\totalcarehealth\FilesLoaded.txt

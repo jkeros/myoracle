@@ -1,0 +1,14 @@
+
+C:\Automated_DataLoad_Jobs\Test\ccc>set _my_datetime=Wed 01/28/2015_16:50:06.89 
+
+C:\Automated_DataLoad_Jobs\Test\ccc>set _my_datetime=Wed_01/28/2015_16:50:06.89 
+
+C:\Automated_DataLoad_Jobs\Test\ccc>set _my_datetime=Wed_01/28/2015_165006.89 
+
+C:\Automated_DataLoad_Jobs\Test\ccc>set _my_datetime=Wed_01_28_2015_165006.89 
+
+C:\Automated_DataLoad_Jobs\Test\ccc>set _my_datetime=Wed_01_28_2015_165006_89 
+
+C:\Automated_DataLoad_Jobs\Test\ccc>sqlplus julieker/hmrc$$julie1015@hradev_oracle @c:\AutoMated_DataLoad_Jobs\test\ccc\scriptcopystagingprodccc.sql  1>c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\scriptcopystagingprodccc_Wed_01_28_2015_165006_89.log 
+
+C:\Automated_DataLoad_Jobs\Test\ccc>C:\Automated_DataLoad_Jobs\Test\ccc\cccdir.bat  1>c:\AutoMated_DataLoad_Jobs\TEST\ccc\LOG\dir_Wed_01_28_2015_165006_89.out 

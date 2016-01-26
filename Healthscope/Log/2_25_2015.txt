@@ -1,0 +1,86 @@
+starting...
+here is efilename:34090_201502241652_CBT_Bio_20150224.csv
+here is pExcel:C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\toprocess\34090_201502241652_CBT_Bio_20150224.csv
+Here is pexcel before grabbing file size:C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\toprocess\34090_201502241652_CBT_Bio_20150224.csv
+here is sqldrvar : java sqlLoad  data=C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\toprocess\34090_201502241652_CBT_Bio_20150224.csv control=C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\control\LiveHealthier.ctl log=C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\log\34090_201502241652_CBT_Bio_20150224.csv.log bad=C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\log\34090_201502241652_CBT_Bio_20150224.csv.bad
+-------------------Done executing sql loader 
+here is testelig : 
+SQL*Loader: Release 11.2.0.1.0 - Production on Wed Feb 25 17:54:59 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\control\LiveHealthier.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\toprocess\34090_201502241652_CBT_Bio_20150224.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\log\34090_201502241652_CBT_Bio_20150224.csv.bad
+  Discard File: cbt_dsc.txt 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+Silent options: FEEDBACK, ERRORS and DISCARDS
+
+Table BIO_2011_FOR_PAPER_HRA_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     *   ,  O(") CHARACTER            
+FIRST_NM                             NEXT     *   ,  O(") CHARACTER            
+LAST_NM                              NEXT     *   ,  O(") CHARACTER            
+COMPANY_CD                           NEXT     *   ,  O(") CHARACTER            
+LOCATION_TXT                         NEXT     *   ,  O(") CHARACTER            
+RELATION_CD                          NEXT     *   ,  O(") CHARACTER            
+GENDER_IND                           NEXT     *   ,  O(") CHARACTER            
+DOB_DT                               NEXT     *   ,  O(") DATE mm/dd/yyyy      
+BIO_DATE_VAL                         NEXT     *   ,  O(") DATE mm/dd/yyyy      
+HEIGHT_FEET_VAL                      NEXT     *   ,  O(") CHARACTER            
+HEIGHT_INCHES_VAL                    NEXT     *   ,  O(") CHARACTER            
+WEIGHT_VAL                           NEXT     *   ,  O(") CHARACTER            
+WAIST_CIRC_VAL                       NEXT     *   ,  O(") CHARACTER            
+SBP_VAL                              NEXT     *   ,  O(") CHARACTER            
+DBP_VAL                              NEXT     *   ,  O(") CHARACTER            
+CHOLESTEROL_VAL                      NEXT     *   ,  O(") CHARACTER            
+FAST_GLUCOSE_VAL                     NEXT     *   ,  O(") CHARACTER            
+NONFAST_GLUCOSE_VAL                  NEXT     *   ,  O(") CHARACTER            
+HDL_VAL                              NEXT     *   ,  O(") CHARACTER            
+LDL_VAL                              NEXT     *   ,  O(") CHARACTER            
+BODY_FAT_VAL                         NEXT     *   ,  O(") CHARACTER            
+PSA_VAL                              NEXT     *   ,  O(") CHARACTER            
+HBA1C_VAL                            NEXT     *   ,  O(") CHARACTER            
+
+value used for ROWS parameter changed from 64 to 43
+
+Table BIO_2011_FOR_PAPER_HRA_RAW:
+  2 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 255162 bytes(43 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:             2
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Wed Feb 25 17:54:59 2015
+Run ended on Wed Feb 25 17:54:59 2015
+
+Elapsed time was:     00:00:00.10
+CPU time was:         00:00:00.00
+
+Here is java mail string:java -cp C:\Users\hmrc_scheduler\classes\javax.mail.jar;.;C:\Users\hmrc_scheduler\classes SendEmail "julieker@umich.edu,lingzhic@umich.edu,jerschat@umich.edu" "Automatic Bio Feed data load for LiveHealthierCBT" "The Bio data load for LiveHealthier CBT was successful for "34090_201502241652_CBT_Bio_20150224".csv" Number matching: 0
+Number not matching: 2
+Total Number:2
+
+ directory listing.....
+ END of processing for FILE:   going to kill properly
+ END of processing for FILE:  C:\AutoMated_DataLoad_Jobs\test\LiveHealthier\toprocess\34090_201502241652_CBT_Bio_20150224.csv going to kill properly
+ END of processing for FILE:  U:\Livehealthier\CBT_bio\34090_201502241652_CBT_Bio_20150224.csv going to kill properly

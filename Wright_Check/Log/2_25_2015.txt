@@ -1,0 +1,82 @@
+starting...
+here is efilename:WCWS_HRA_Eligibility_File_12-18-14.xlsx
+here is pExcel:C:\AutoMated_DataLoad_Jobs\test\wright_check\toprocess\WCWS_HRA_Eligibility_File_12-18-14.xlsx
+here is Javastring:java -cp C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\poi-ooxml-schemas-3.10.1-20140818.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\dom4j-1.6.1.jar;C:\Users\hmrc_scheduler\classes\poi-bin-3.10.1-20140818\poi-3.10.1\ooxml-lib\xmlbeans-2.6.0.jar;.;C:\Users\hmrc_scheduler\classes ExcelToCSVNonSchool2 C:\\AutoMated_DataLoad_Jobs\\test\\wright_check\\toprocess\\"WCWS_HRA_Eligibility_File_12-18-14".xlsx C:\\AutoMated_DataLoad_Jobs\\test\\wright_check\\toprocess\\WCWS_HRA_Eligibility_File_12-18-14.csv 1
+Here is pexcel before grabbing file size:C:\AutoMated_DataLoad_Jobs\test\wright_check\toprocess\WCWS_HRA_Eligibility_File_12-18-14.xlsx
+here is sqldrvar : java sqlLoad data=C:\AutoMated_DataLoad_Jobs\test\wright_check\toprocess\WCWS_HRA_Eligibility_File_12-18-14.csv control=C:\AutoMated_DataLoad_Jobs\test\wright_check\control\wright_check.ctl log=C:\AutoMated_DataLoad_Jobs\test\wright_check\log\WCWS_HRA_Eligibility_File_12-18-14.xlsx.log bad=C:\AutoMated_DataLoad_Jobs\test\wright_check\log\WCWS_HRA_Eligibility_File_12-18-14.xlsx.bad
+-------------------Done executing sql loader 
+here is testelig : 
+SQL*Loader: Release 11.2.0.1.0 - Production on Wed Feb 25 08:48:44 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\AutoMated_DataLoad_Jobs\test\wright_check\control\wright_check.ctl
+Data File:      C:\AutoMated_DataLoad_Jobs\test\wright_check\toprocess\WCWS_HRA_Eligibility_File_12-18-14.csv
+  Bad File:     C:\AutoMated_DataLoad_Jobs\test\wright_check\log\WCWS_HRA_Eligibility_File_12-18-14.xlsx.bad
+  Discard File: WCWS_HRA_Eligibility_File_8-26-14.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PERSON_WRIGHTCHECK_RAW, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COMPANY_CD                          FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:company_cd)"
+DEPARTMENT_CD                        NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:department_cd)"
+LOCATION_CD                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:location_cd)"
+ID                                   NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:id)"
+FIRST_NM                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:first_nm)"
+LAST_NM                              NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:last_nm)"
+GENDER_IND                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:gender_ind)"
+RELATION_CD                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "trim(:relation_cd)"
+DOB_DT                               NEXT     *   ,  O(") DATE mm/dd/yyyy      
+    NULL if DOB_DT = 0X312f302f31393030(character '1/0/1900')
+
+Record 2: Discarded - all columns null.
+Record 3: Discarded - all columns null.
+Record 4: Discarded - all columns null.
+Record 5: Discarded - all columns null.
+Record 6: Discarded - all columns null.
+Record 7: Discarded - all columns null.
+
+Table PERSON_WRIGHTCHECK_RAW:
+  1 Row successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  6 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 148608 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:             7
+Total logical records rejected:         0
+Total logical records discarded:        6
+
+Run began on Wed Feb 25 08:48:44 2015
+Run ended on Wed Feb 25 08:48:44 2015
+
+Elapsed time was:     00:00:00.31
+CPU time was:         00:00:00.04
+
+ directory listing.....
+ END of processing for FILE:   going to kill properly
+ END of processing for FILE:  C:\AutoMated_DataLoad_Jobs\test\wright_check\toprocess\WCWS_HRA_Eligibility_File_12-18-14.csv going to kill properly
+ END of processing for FILE:  Z:\wright_check\WCWS_HRA_Eligibility_File_12-18-14.xlsx going to kill properly

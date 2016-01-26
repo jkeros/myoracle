@@ -1,0 +1,21 @@
+
+SQL*Plus: Release 11.2.0.1.0 Production on Fri Feb 27 14:35:50 2015
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+  from hmrc_loaderbio_2011_for_paper_hra_raw @hmr2_oracle  where trunc(create_dt) = trunc(sysdate)
+       *
+ERROR at line 36:
+ORA-00972: identifier is too long
+
+
+
+Commit complete.
+
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
